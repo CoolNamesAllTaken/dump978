@@ -2,17 +2,17 @@
 // Copyright 2015, Oliver Jowett <oliver@mutability.co.uk>
 //
 
-// This file is free software: you may copy, redistribute and/or modify it  
+// This file is free software: you may copy, redistribute and/or modify it
 // under the terms of the GNU General Public License as published by the
-// Free Software Foundation, either version 2 of the License, or (at your  
-// option) any later version.  
+// Free Software Foundation, either version 2 of the License, or (at your
+// option) any later version.
 //
-// This file is distributed in the hope that it will be useful, but  
-// WITHOUT ANY WARRANTY; without even the implied warranty of  
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU  
+// This file is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 // General Public License for more details.
 //
-// You should have received a copy of the GNU General Public License  
+// You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <stdio.h>
@@ -31,7 +31,8 @@
 
 #define NON_ICAO_ADDRESS 0x1000000U
 
-struct aircraft {
+struct aircraft
+{
     struct aircraft *next;
     uint32_t address;
 
@@ -39,11 +40,11 @@ struct aircraft {
     time_t last_seen;
     time_t last_seen_pos;
 
-    int position_valid : 1;
-    int altitude_valid : 1;
-    int track_valid : 1;
-    int speed_valid : 1;
-    int vert_rate_valid : 1;
+    unsigned int position_valid : 1;
+    unsigned int altitude_valid : 1;
+    unsigned int track_valid : 1;
+    unsigned int speed_valid : 1;
+    unsigned int vert_rate_valid : 1;
 
     airground_state_t airground_state;
     char callsign[9];
@@ -55,7 +56,7 @@ struct aircraft {
 
     // if altitude_valid:
     int32_t altitude; // in feet
-    
+
     // if track_valid:
     uint16_t track;
 
@@ -64,7 +65,7 @@ struct aircraft {
 
     // if vert_rate_valid:
     int16_t vert_rate; // in ft/min
-};        
+};
 
 static struct aircraft *aircraft_list;
 static time_t NOW;
@@ -97,12 +98,16 @@ static struct aircraft *find_or_create_aircraft(uint32_t address)
 
 static void expire_old_aircraft()
 {
-    struct aircraft *a, **last;    
-    for (last = &aircraft_list, a = *last; a; a = *last) {
-        if ((NOW - a->last_seen) > 300) {
+    struct aircraft *a, **last;
+    for (last = &aircraft_list, a = *last; a; a = *last)
+    {
+        if ((NOW - a->last_seen) > 300)
+        {
             *last = a->next;
             free(a);
-        } else {
+        }
+        else
+        {
             last = &a->next;
         }
     }
@@ -114,10 +119,11 @@ static void process_mdb(struct uat_adsb_mdb *mdb)
 {
     struct aircraft *a;
     uint32_t addr;
-    
+
     ++message_count;
 
-    switch (mdb->address_qualifier) {
+    switch (mdb->address_qualifier)
+    {
     case AQ_ADSB_ICAO:
     case AQ_TISB_ICAO:
         addr = mdb->address;
@@ -127,50 +133,57 @@ static void process_mdb(struct uat_adsb_mdb *mdb)
         addr = mdb->address | NON_ICAO_ADDRESS;
         break;
     }
-   
+
     a = find_or_create_aircraft(addr);
     a->last_seen = NOW;
     ++a->messages;
-    
+
     // copy state into aircraft
     if (mdb->airground_state != AG_RESERVED)
         a->airground_state = mdb->airground_state;
 
-    if (mdb->position_valid) {
+    if (mdb->position_valid)
+    {
         a->position_valid = 1;
         a->lat = mdb->lat;
         a->lon = mdb->lon;
         a->last_seen_pos = NOW;
     }
-        
-    if (mdb->altitude_type != ALT_INVALID) {
+
+    if (mdb->altitude_type != ALT_INVALID)
+    {
         a->altitude_valid = 1;
         a->altitude = mdb->altitude;
     }
 
-    if (mdb->track_type != TT_INVALID) {
+    if (mdb->track_type != TT_INVALID)
+    {
         a->track_valid = 1;
         a->track = mdb->track;
     }
 
-    if (mdb->speed_valid) {
+    if (mdb->speed_valid)
+    {
         a->speed_valid = 1;
         a->speed = mdb->speed;
     }
-    
-    if (mdb->vert_rate_source != ALT_INVALID) {
+
+    if (mdb->vert_rate_source != ALT_INVALID)
+    {
         a->vert_rate_valid = 1;
         a->vert_rate = mdb->vert_rate;
     }
-    
+
     if (mdb->callsign_type == CS_CALLSIGN)
         strcpy(a->callsign, mdb->callsign);
     else if (mdb->callsign_type == CS_SQUAWK)
         strcpy(a->squawk, mdb->callsign);
 
-    if (mdb->sec_altitude_type != ALT_INVALID) {
+    if (mdb->sec_altitude_type != ALT_INVALID)
+    {
         // only use secondary if no primary is available
-        if (!a->altitude_valid || mdb->altitude_type == ALT_INVALID) {
+        if (!a->altitude_valid || mdb->altitude_type == ALT_INVALID)
+        {
             a->altitude_valid = 1;
             a->altitude = mdb->sec_altitude;
         }
@@ -183,12 +196,14 @@ static int write_receiver_json(const char *dir)
     char path_new[PATH_MAX];
     FILE *f;
 
-    if (snprintf(path, PATH_MAX, "%s/receiver.json", dir) >= PATH_MAX || snprintf(path_new, PATH_MAX, "%s/receiver.json.new", dir) >= PATH_MAX) {
+    if (snprintf(path, PATH_MAX, "%s/receiver.json", dir) >= PATH_MAX || snprintf(path_new, PATH_MAX, "%s/receiver.json.new", dir) >= PATH_MAX)
+    {
         fprintf(stderr, "write_receiver_json: path too long\n");
         return 0;
     }
 
-    if (!(f = fopen(path_new, "w"))) {
+    if (!(f = fopen(path_new, "w")))
+    {
         fprintf(stderr, "fopen(%s): %m\n", path_new);
         return 0;
     }
@@ -201,7 +216,8 @@ static int write_receiver_json(const char *dir)
             "}\n");
     fclose(f);
 
-    if (rename(path_new, path) < 0) {
+    if (rename(path_new, path) < 0)
+    {
         fprintf(stderr, "rename(%s,%s): %m\n", path_new, path);
         return 0;
     }
@@ -216,12 +232,14 @@ static int write_aircraft_json(const char *dir)
     FILE *f;
     struct aircraft *a;
 
-    if (snprintf(path, PATH_MAX, "%s/aircraft.json", dir) >= PATH_MAX || snprintf(path_new, PATH_MAX, "%s/aircraft.json.new", dir) >= PATH_MAX) {
+    if (snprintf(path, PATH_MAX, "%s/aircraft.json", dir) >= PATH_MAX || snprintf(path_new, PATH_MAX, "%s/aircraft.json.new", dir) >= PATH_MAX)
+    {
         fprintf(stderr, "write_aircraft_json: path too long\n");
         return 0;
     }
 
-    if (!(f = fopen(path_new, "w"))) {
+    if (!(f = fopen(path_new, "w")))
+    {
         fprintf(stderr, "fopen(%s): %m\n", path_new);
         return 0;
     }
@@ -233,9 +251,9 @@ static int write_aircraft_json(const char *dir)
             "  \"aircraft\" : [\n",
             (unsigned)NOW,
             message_count);
-    
 
-    for (a = aircraft_list; a; a = a->next) {
+    for (a = aircraft_list; a; a = a->next)
+    {
         if (a != aircraft_list)
             fprintf(f, ",\n");
         fprintf(f,
@@ -248,7 +266,7 @@ static int write_aircraft_json(const char *dir)
         if (a->callsign[0])
             fprintf(f, ",\"flight\":\"%s\"", a->callsign);
         if (a->position_valid)
-            fprintf(f, ",\"lat\":%.6f,\"lon\":%.6f,\"seen_pos\":%u", a->lat, a->lon, (unsigned) (NOW - a->last_seen_pos));        
+            fprintf(f, ",\"lat\":%.6f,\"lon\":%.6f,\"seen_pos\":%u", a->lat, a->lon, (unsigned)(NOW - a->last_seen_pos));
         if (a->altitude_valid)
             fprintf(f, ",\"altitude\":%d", a->altitude);
         if (a->vert_rate_valid)
@@ -258,7 +276,7 @@ static int write_aircraft_json(const char *dir)
         if (a->speed_valid)
             fprintf(f, ",\"speed\":%u", a->speed);
         fprintf(f, ",\"messages\":%u,\"seen\":%u,\"rssi\":0}",
-                a->messages, (unsigned) (NOW - a->last_seen));
+                a->messages, (unsigned)(NOW - a->last_seen));
     }
 
     fprintf(f,
@@ -266,18 +284,20 @@ static int write_aircraft_json(const char *dir)
             "}\n");
     fclose(f);
 
-    if (rename(path_new, path) < 0) {
+    if (rename(path_new, path) < 0)
+    {
         fprintf(stderr, "rename(%s,%s): %m\n", path_new, path);
         return 0;
     }
 
     return 1;
 }
-    
+
 static void periodic_work()
 {
     static time_t next_write;
-    if (NOW >= next_write) {
+    if (NOW >= next_write)
+    {
         expire_old_aircraft();
         write_aircraft_json(json_dir);
         next_write = NOW + 1;
@@ -291,37 +311,46 @@ static void handle_frame(frame_type_t type, uint8_t *frame, int len, void *extra
     if (type != UAT_DOWNLINK)
         return;
 
-    if (len == SHORT_FRAME_DATA_BYTES) {
-        if ((frame[0] >> 3) != 0) {
+    if (len == SHORT_FRAME_DATA_BYTES)
+    {
+        if ((frame[0] >> 3) != 0)
+        {
             fprintf(stderr, "short frame with non-zero type\n");
             return;
         }
-    } else if (len == LONG_FRAME_DATA_BYTES) {
-        if ((frame[0] >> 3) == 0) {
+    }
+    else if (len == LONG_FRAME_DATA_BYTES)
+    {
+        if ((frame[0] >> 3) == 0)
+        {
             fprintf(stderr, "long frame with zero type\n");
             return;
         }
-    } else {
+    }
+    else
+    {
         fprintf(stderr, "odd frame size: %d\n", len);
         return;
     }
 
     uat_decode_adsb_mdb(frame, &mdb);
-    //uat_display_adsb_mdb(&mdb, stdout);    
+    // uat_display_adsb_mdb(&mdb, stdout);
     process_mdb(&mdb);
-}                                                        
+}
 
 static void read_loop()
 {
     struct dump978_reader *reader;
 
     reader = dump978_reader_new(0, 1);
-    if (!reader) {
+    if (!reader)
+    {
         perror("dump978_reader_new");
         return;
     }
 
-    for (;;) {
+    for (;;)
+    {
         fd_set readset, writeset, excset;
         struct timeval timeout;
         int framecount;
@@ -342,7 +371,8 @@ static void read_loop()
         if (framecount == 0)
             break;
 
-        if (framecount < 0 && errno != EAGAIN && errno != EINTR && errno != EWOULDBLOCK) {
+        if (framecount < 0 && errno != EAGAIN && errno != EINTR && errno != EWOULDBLOCK)
+        {
             perror("dump978_read_frames");
             break;
         }
@@ -351,11 +381,12 @@ static void read_loop()
     }
 
     dump978_reader_free(reader);
-}                    
+}
 
 int main(int argc, char **argv)
 {
-    if (argc < 2) {
+    if (argc < 2)
+    {
         fprintf(stderr,
                 "Syntax: %s <dir>\n"
                 "\n"
@@ -368,7 +399,8 @@ int main(int argc, char **argv)
 
     json_dir = argv[1];
 
-    if (!write_receiver_json(json_dir)) {
+    if (!write_receiver_json(json_dir))
+    {
         fprintf(stderr, "Failed to write receiver.json - check permissions?\n");
         return 1;
     }
