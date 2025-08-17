@@ -5,3 +5,4 @@ extract_nexrad
 uat2esnt
 uat2json
 uat2text
+*.DS_Store
