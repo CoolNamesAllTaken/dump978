@@ -9,7 +9,7 @@ SV:
  Altitude:          1000 ft (barometric)
  N/S velocity:      -99 kt
  E/W velocity:      65 kt
- Track:             146
+ Track:             147
  Speed:             118 kt
  Vertical rate:     -192 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -26,7 +26,7 @@ SV:
  Altitude:          1000 ft (barometric)
  N/S velocity:      -100 kt
  E/W velocity:      65 kt
- Track:             146
+ Track:             147
  Speed:             119 kt
  Vertical rate:     -192 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -43,7 +43,7 @@ SV:
  Altitude:          1000 ft (barometric)
  N/S velocity:      -101 kt
  E/W velocity:      71 kt
- Track:             144
+ Track:             145
  Speed:             123 kt
  Vertical rate:     -64 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -60,7 +60,7 @@ SV:
  Altitude:          1000 ft (barometric)
  N/S velocity:      -101 kt
  E/W velocity:      72 kt
- Track:             144
+ Track:             145
  Speed:             124 kt
  Vertical rate:     -64 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -127,7 +127,7 @@ SV:
  N/S velocity:      -96 kt
  E/W velocity:      86 kt
  Track:             138
- Speed:             128 kt
+ Speed:             129 kt
  Vertical rate:     -64 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -144,7 +144,7 @@ SV:
  N/S velocity:      -93 kt
  E/W velocity:      89 kt
  Track:             136
- Speed:             128 kt
+ Speed:             129 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -162,7 +162,7 @@ SV:
  Altitude:          950 ft (barometric)
  N/S velocity:      -92 kt
  E/W velocity:      89 kt
- Track:             135
+ Track:             136
  Speed:             128 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -179,7 +179,7 @@ SV:
  Altitude:          950 ft (barometric)
  N/S velocity:      -94 kt
  E/W velocity:      86 kt
- Track:             137
+ Track:             138
  Speed:             127 kt
  Vertical rate:     -128 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -211,7 +211,7 @@ SV:
  Altitude:          950 ft (barometric)
  N/S velocity:      -95 kt
  E/W velocity:      86 kt
- Track:             137
+ Track:             138
  Speed:             128 kt
  Vertical rate:     -192 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -228,7 +228,7 @@ SV:
  Altitude:          950 ft (barometric)
  N/S velocity:      -95 kt
  E/W velocity:      86 kt
- Track:             137
+ Track:             138
  Speed:             128 kt
  Vertical rate:     -192 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -247,7 +247,7 @@ SV:
  Altitude:          950 ft (barometric)
  N/S velocity:      -95 kt
  E/W velocity:      86 kt
- Track:             137
+ Track:             138
  Speed:             128 kt
  Vertical rate:     -256 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -266,7 +266,7 @@ SV:
  Altitude:          950 ft (barometric)
  N/S velocity:      -95 kt
  E/W velocity:      86 kt
- Track:             137
+ Track:             138
  Speed:             128 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -283,7 +283,7 @@ SV:
  Altitude:          950 ft (barometric)
  N/S velocity:      -94 kt
  E/W velocity:      86 kt
- Track:             137
+ Track:             138
  Speed:             127 kt
  Vertical rate:     64 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -300,8 +300,8 @@ SV:
  Altitude:          950 ft (barometric)
  N/S velocity:      -94 kt
  E/W velocity:      82 kt
- Track:             138
- Speed:             124 kt
+ Track:             139
+ Speed:             125 kt
  Vertical rate:     256 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -318,7 +318,7 @@ SV:
  N/S velocity:      -93 kt
  E/W velocity:      80 kt
  Track:             139
- Speed:             122 kt
+ Speed:             123 kt
  Vertical rate:     64 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -337,7 +337,7 @@ SV:
  N/S velocity:      -93 kt
  E/W velocity:      80 kt
  Track:             139
- Speed:             122 kt
+ Speed:             123 kt
  Vertical rate:     64 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -356,7 +356,7 @@ SV:
  N/S velocity:      -93 kt
  E/W velocity:      80 kt
  Track:             139
- Speed:             122 kt
+ Speed:             123 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -388,7 +388,7 @@ SV:
  N/S velocity:      -93 kt
  E/W velocity:      80 kt
  Track:             139
- Speed:             122 kt
+ Speed:             123 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -404,7 +404,7 @@ SV:
  Altitude:          950 ft (barometric)
  N/S velocity:      -91 kt
  E/W velocity:      82 kt
- Track:             137
+ Track:             138
  Speed:             122 kt
  Vertical rate:     -64 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -436,7 +436,7 @@ SV:
  Altitude:          950 ft (barometric)
  N/S velocity:      -91 kt
  E/W velocity:      82 kt
- Track:             137
+ Track:             138
  Speed:             122 kt
  Vertical rate:     -64 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -487,8 +487,8 @@ SV:
  Altitude:          950 ft (barometric)
  N/S velocity:      -92 kt
  E/W velocity:      81 kt
- Track:             138
- Speed:             122 kt
+ Track:             139
+ Speed:             123 kt
  Vertical rate:     64 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -504,8 +504,8 @@ SV:
  Altitude:          950 ft (barometric)
  N/S velocity:      -92 kt
  E/W velocity:      81 kt
- Track:             138
- Speed:             122 kt
+ Track:             139
+ Speed:             123 kt
  Vertical rate:     64 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -523,8 +523,8 @@ SV:
  Altitude:          950 ft (barometric)
  N/S velocity:      -92 kt
  E/W velocity:      80 kt
- Track:             138
- Speed:             121 kt
+ Track:             139
+ Speed:             122 kt
  Vertical rate:     64 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -540,8 +540,8 @@ SV:
  Altitude:          975 ft (barometric)
  N/S velocity:      -92 kt
  E/W velocity:      80 kt
- Track:             138
- Speed:             121 kt
+ Track:             139
+ Speed:             122 kt
  Vertical rate:     64 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -557,8 +557,8 @@ SV:
  Altitude:          975 ft (barometric)
  N/S velocity:      -92 kt
  E/W velocity:      80 kt
- Track:             138
- Speed:             121 kt
+ Track:             139
+ Speed:             122 kt
  Vertical rate:     64 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -672,8 +672,8 @@ SV:
  Altitude:          975 ft (barometric)
  N/S velocity:      -92 kt
  E/W velocity:      80 kt
- Track:             138
- Speed:             121 kt
+ Track:             139
+ Speed:             122 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -691,7 +691,7 @@ SV:
  Altitude:          975 ft (barometric)
  N/S velocity:      -91 kt
  E/W velocity:      80 kt
- Track:             138
+ Track:             139
  Speed:             121 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -709,7 +709,7 @@ SV:
  N/S velocity:      -91 kt
  E/W velocity:      81 kt
  Track:             138
- Speed:             121 kt
+ Speed:             122 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -725,8 +725,8 @@ SV:
  Altitude:          975 ft (barometric)
  N/S velocity:      -90 kt
  E/W velocity:      82 kt
- Track:             137
- Speed:             121 kt
+ Track:             138
+ Speed:             122 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -757,8 +757,8 @@ SV:
  Altitude:          975 ft (barometric)
  N/S velocity:      -90 kt
  E/W velocity:      82 kt
- Track:             137
- Speed:             121 kt
+ Track:             138
+ Speed:             122 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -775,7 +775,7 @@ SV:
  N/S velocity:      -88 kt
  E/W velocity:      84 kt
  Track:             136
- Speed:             121 kt
+ Speed:             122 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -793,8 +793,8 @@ SV:
  Altitude:          975 ft (barometric)
  N/S velocity:      -87 kt
  E/W velocity:      85 kt
- Track:             135
- Speed:             121 kt
+ Track:             136
+ Speed:             122 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -810,7 +810,7 @@ SV:
  Altitude:          975 ft (barometric)
  N/S velocity:      -86 kt
  E/W velocity:      87 kt
- Track:             134
+ Track:             135
  Speed:             122 kt
  Vertical rate:     -64 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -896,7 +896,7 @@ SV:
  N/S velocity:      -80 kt
  E/W velocity:      92 kt
  Track:             131
- Speed:             121 kt
+ Speed:             122 kt
  Vertical rate:     192 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -944,7 +944,7 @@ SV:
  Altitude:          1000 ft (barometric)
  N/S velocity:      -72 kt
  E/W velocity:      96 kt
- Track:             126
+ Track:             127
  Speed:             120 kt
  Vertical rate:     320 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -961,8 +961,8 @@ SV:
  Altitude:          1000 ft (barometric)
  N/S velocity:      -70 kt
  E/W velocity:      97 kt
- Track:             125
- Speed:             119 kt
+ Track:             126
+ Speed:             120 kt
  Vertical rate:     384 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -993,7 +993,7 @@ SV:
  Altitude:          1000 ft (barometric)
  N/S velocity:      -68 kt
  E/W velocity:      98 kt
- Track:             124
+ Track:             125
  Speed:             119 kt
  Vertical rate:     448 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -1011,7 +1011,7 @@ SV:
  N/S velocity:      -67 kt
  E/W velocity:      98 kt
  Track:             124
- Speed:             118 kt
+ Speed:             119 kt
  Vertical rate:     448 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -1029,7 +1029,7 @@ SV:
  Altitude:          1025 ft (barometric)
  N/S velocity:      -66 kt
  E/W velocity:      98 kt
- Track:             123
+ Track:             124
  Speed:             118 kt
  Vertical rate:     384 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -1048,8 +1048,8 @@ SV:
  Altitude:          1025 ft (barometric)
  N/S velocity:      -65 kt
  E/W velocity:      98 kt
- Track:             123
- Speed:             117 kt
+ Track:             124
+ Speed:             118 kt
  Vertical rate:     448 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -1097,8 +1097,8 @@ SV:
  Altitude:          1025 ft (barometric)
  N/S velocity:      -63 kt
  E/W velocity:      98 kt
- Track:             122
- Speed:             116 kt
+ Track:             123
+ Speed:             117 kt
  Vertical rate:     320 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -1115,7 +1115,7 @@ SV:
  N/S velocity:      -62 kt
  E/W velocity:      98 kt
  Track:             122
- Speed:             115 kt
+ Speed:             116 kt
  Vertical rate:     320 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -1131,7 +1131,7 @@ SV:
  Altitude:          1050 ft (barometric)
  N/S velocity:      -61 kt
  E/W velocity:      99 kt
- Track:             121
+ Track:             122
  Speed:             116 kt
  Vertical rate:     256 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -1151,7 +1151,7 @@ SV:
  N/S velocity:      -60 kt
  E/W velocity:      99 kt
  Track:             121
- Speed:             115 kt
+ Speed:             116 kt
  Vertical rate:     256 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -1168,7 +1168,7 @@ SV:
  N/S velocity:      -58 kt
  E/W velocity:      100 kt
  Track:             120
- Speed:             115 kt
+ Speed:             116 kt
  Vertical rate:     192 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -1200,7 +1200,7 @@ SV:
  N/S velocity:      -58 kt
  E/W velocity:      100 kt
  Track:             120
- Speed:             115 kt
+ Speed:             116 kt
  Vertical rate:     192 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -1231,7 +1231,7 @@ SV:
  Altitude:          1050 ft (barometric)
  N/S velocity:      -57 kt
  E/W velocity:      100 kt
- Track:             119
+ Track:             120
  Speed:             115 kt
  Vertical rate:     128 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -1284,7 +1284,7 @@ SV:
  Altitude:          1050 ft (barometric)
  N/S velocity:      -55 kt
  E/W velocity:      101 kt
- Track:             118
+ Track:             119
  Speed:             115 kt
  Vertical rate:     256 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -1302,7 +1302,7 @@ SV:
  N/S velocity:      -54 kt
  E/W velocity:      101 kt
  Track:             118
- Speed:             114 kt
+ Speed:             115 kt
  Vertical rate:     256 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -1334,7 +1334,7 @@ SV:
  N/S velocity:      -54 kt
  E/W velocity:      101 kt
  Track:             118
- Speed:             114 kt
+ Speed:             115 kt
  Vertical rate:     320 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -1350,7 +1350,7 @@ SV:
  Altitude:          1075 ft (barometric)
  N/S velocity:      -53 kt
  E/W velocity:      101 kt
- Track:             117
+ Track:             118
  Speed:             114 kt
  Vertical rate:     256 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -1370,7 +1370,7 @@ SV:
  N/S velocity:      -54 kt
  E/W velocity:      101 kt
  Track:             118
- Speed:             114 kt
+ Speed:             115 kt
  Vertical rate:     192 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -1388,7 +1388,7 @@ SV:
  Altitude:          1100 ft (barometric)
  N/S velocity:      -53 kt
  E/W velocity:      101 kt
- Track:             117
+ Track:             118
  Speed:             114 kt
  Vertical rate:     256 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -1405,7 +1405,7 @@ SV:
  Altitude:          1075 ft (barometric)
  N/S velocity:      -53 kt
  E/W velocity:      101 kt
- Track:             117
+ Track:             118
  Speed:             114 kt
  Vertical rate:     192 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -1437,7 +1437,7 @@ SV:
  Altitude:          1075 ft (barometric)
  N/S velocity:      -53 kt
  E/W velocity:      101 kt
- Track:             117
+ Track:             118
  Speed:             114 kt
  Vertical rate:     128 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -1473,7 +1473,7 @@ SV:
  Altitude:          1100 ft (barometric)
  N/S velocity:      -51 kt
  E/W velocity:      102 kt
- Track:             116
+ Track:             117
  Speed:             114 kt
  Vertical rate:     64 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -1490,7 +1490,7 @@ SV:
  Altitude:          1100 ft (barometric)
  N/S velocity:      -50 kt
  E/W velocity:      103 kt
- Track:             115
+ Track:             116
  Speed:             114 kt
  Vertical rate:     128 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -1523,7 +1523,7 @@ SV:
  N/S velocity:      -49 kt
  E/W velocity:      104 kt
  Track:             115
- Speed:             114 kt
+ Speed:             115 kt
  Vertical rate:     192 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -1554,8 +1554,8 @@ SV:
  Altitude:          650 ft (barometric)
  N/S velocity:      -70 kt
  E/W velocity:      46 kt
- Track:             146
- Speed:             83 kt
+ Track:             147
+ Speed:             84 kt
  Vertical rate:     448 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -1586,8 +1586,8 @@ SV:
  Altitude:          1650 ft (barometric)
  N/S velocity:      83 kt
  E/W velocity:      -157 kt
- Track:             297
- Speed:             177 kt
+ Track:             298
+ Speed:             178 kt
  Vertical rate:     -1024 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -1619,7 +1619,7 @@ SV:
  N/S velocity:      -49 kt
  E/W velocity:      104 kt
  Track:             115
- Speed:             114 kt
+ Speed:             115 kt
  Vertical rate:     192 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -1635,7 +1635,7 @@ SV:
  Altitude:          675 ft (barometric)
  N/S velocity:      -56 kt
  E/W velocity:      63 kt
- Track:             131
+ Track:             132
  Speed:             84 kt
  Vertical rate:     512 ft/min (from barometric altitude)
  UTC coupling:      no
@@ -1767,8 +1767,8 @@ SV:
  Altitude:          1100 ft (barometric)
  N/S velocity:      -46 kt
  E/W velocity:      105 kt
- Track:             113
- Speed:             114 kt
+ Track:             114
+ Speed:             115 kt
  Vertical rate:     256 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -1785,7 +1785,7 @@ SV:
  N/S velocity:      -227 kt
  E/W velocity:      -37 kt
  Track:             189
- Speed:             229 kt
+ Speed:             230 kt
  Vertical rate:     192 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -1816,8 +1816,8 @@ SV:
  Altitude:          1125 ft (barometric)
  N/S velocity:      -44 kt
  E/W velocity:      105 kt
- Track:             112
- Speed:             113 kt
+ Track:             113
+ Speed:             114 kt
  Vertical rate:     256 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -1848,7 +1848,7 @@ SV:
  Altitude:          2125 ft (barometric)
  N/S velocity:      -141 kt
  E/W velocity:      -131 kt
- Track:             222
+ Track:             223
  Speed:             192 kt
  Vertical rate:     -832 ft/min (from barometric altitude)
  UTC coupling:      no
@@ -1912,7 +1912,7 @@ SV:
  Altitude:          1225 ft (barometric)
  N/S velocity:      -229 kt
  E/W velocity:      -31 kt
- Track:             187
+ Track:             188
  Speed:             231 kt
  Vertical rate:     192 ft/min (from geometric altitude)
  UTC coupling:      no
@@ -1944,7 +1944,7 @@ SV:
  Altitude:          1225 ft (barometric)
  N/S velocity:      -231 kt
  E/W velocity:      -24 kt
- Track:             185
+ Track:             186
  Speed:             232 kt
  Vertical rate:     256 ft/min (from geometric altitude)
  UTC coupling:      no
@@ -1976,8 +1976,8 @@ SV:
  Altitude:          1125 ft (barometric)
  N/S velocity:      -44 kt
  E/W velocity:      105 kt
- Track:             112
- Speed:             113 kt
+ Track:             113
+ Speed:             114 kt
  Vertical rate:     192 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -1993,8 +1993,8 @@ SV:
  Altitude:          1600 ft (barometric)
  N/S velocity:      80 kt
  E/W velocity:      -159 kt
- Track:             296
- Speed:             177 kt
+ Track:             297
+ Speed:             178 kt
  Vertical rate:     -832 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -2057,8 +2057,8 @@ SV:
  Altitude:          1225 ft (barometric)
  N/S velocity:      -233 kt
  E/W velocity:      -20 kt
- Track:             184
- Speed:             233 kt
+ Track:             185
+ Speed:             234 kt
  Vertical rate:     256 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -2173,7 +2173,7 @@ SV:
  N/S velocity:      -140 kt
  E/W velocity:      -131 kt
  Track:             223
- Speed:             191 kt
+ Speed:             192 kt
  Vertical rate:     -768 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -2204,8 +2204,8 @@ SV:
  Altitude:          575 ft (barometric)
  N/S velocity:      61 kt
  E/W velocity:      -102 kt
- Track:             300
- Speed:             118 kt
+ Track:             301
+ Speed:             119 kt
  Vertical rate:     -448 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -2236,7 +2236,7 @@ SV:
  Altitude:          1225 ft (barometric)
  N/S velocity:      -235 kt
  E/W velocity:      -7 kt
- Track:             181
+ Track:             182
  Speed:             235 kt
  Vertical rate:     320 ft/min (from geometric altitude)
  UTC coupling:      no
@@ -2400,8 +2400,8 @@ SV:
  Altitude:          1225 ft (barometric)
  N/S velocity:      -238 kt
  E/W velocity:      17 kt
- Track:             175
- Speed:             238 kt
+ Track:             176
+ Speed:             239 kt
  Vertical rate:     384 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -2432,8 +2432,8 @@ SV:
  Altitude:          525 ft (barometric)
  N/S velocity:      59 kt
  E/W velocity:      -103 kt
- Track:             299
- Speed:             118 kt
+ Track:             300
+ Speed:             119 kt
  Vertical rate:     -448 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -2496,8 +2496,8 @@ SV:
  Altitude:          1125 ft (barometric)
  N/S velocity:      -44 kt
  E/W velocity:      105 kt
- Track:             112
- Speed:             113 kt
+ Track:             113
+ Speed:             114 kt
  Vertical rate:     192 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -2528,7 +2528,7 @@ SV:
  Altitude:          1250 ft (barometric)
  N/S velocity:      -238 kt
  E/W velocity:      22 kt
- Track:             174
+ Track:             175
  Speed:             239 kt
  Vertical rate:     512 ft/min (from geometric altitude)
  UTC coupling:      no
@@ -2561,7 +2561,7 @@ SV:
  N/S velocity:      -238 kt
  E/W velocity:      29 kt
  Track:             173
- Speed:             239 kt
+ Speed:             240 kt
  Vertical rate:     512 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -2592,8 +2592,8 @@ SV:
  Altitude:          1500 ft (barometric)
  N/S velocity:      80 kt
  E/W velocity:      -159 kt
- Track:             296
- Speed:             177 kt
+ Track:             297
+ Speed:             178 kt
  Vertical rate:     -896 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -2625,7 +2625,7 @@ SV:
  N/S velocity:      -62 kt
  E/W velocity:      61 kt
  Track:             135
- Speed:             86 kt
+ Speed:             87 kt
  Vertical rate:     512 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -2657,7 +2657,7 @@ SV:
  N/S velocity:      -237 kt
  E/W velocity:      36 kt
  Track:             171
- Speed:             239 kt
+ Speed:             240 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -2688,8 +2688,8 @@ SV:
  Altitude:          1125 ft (barometric)
  N/S velocity:      -44 kt
  E/W velocity:      105 kt
- Track:             112
- Speed:             113 kt
+ Track:             113
+ Speed:             114 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -2769,8 +2769,8 @@ SV:
  Altitude:          1250 ft (barometric)
  N/S velocity:      -236 kt
  E/W velocity:      47 kt
- Track:             168
- Speed:             240 kt
+ Track:             169
+ Speed:             241 kt
  Vertical rate:     832 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -2801,7 +2801,7 @@ SV:
  Altitude:          1975 ft (barometric)
  N/S velocity:      -72 kt
  E/W velocity:      -177 kt
- Track:             247
+ Track:             248
  Speed:             191 kt
  Vertical rate:     -1024 ft/min (from barometric altitude)
  UTC coupling:      no
@@ -2833,8 +2833,8 @@ SV:
  Altitude:          1125 ft (barometric)
  N/S velocity:      -44 kt
  E/W velocity:      106 kt
- Track:             112
- Speed:             114 kt
+ Track:             113
+ Speed:             115 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -2850,8 +2850,8 @@ SV:
  Altitude:          1150 ft (barometric)
  N/S velocity:      -44 kt
  E/W velocity:      106 kt
- Track:             112
- Speed:             114 kt
+ Track:             113
+ Speed:             115 kt
  Vertical rate:     -64 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -2870,7 +2870,7 @@ SV:
  N/S velocity:      -235 kt
  E/W velocity:      53 kt
  Track:             167
- Speed:             240 kt
+ Speed:             241 kt
  Vertical rate:     896 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -2934,7 +2934,7 @@ SV:
  N/S velocity:      -60 kt
  E/W velocity:      64 kt
  Track:             133
- Speed:             87 kt
+ Speed:             88 kt
  Vertical rate:     576 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -3111,7 +3111,7 @@ SV:
  N/S velocity:      18 kt
  E/W velocity:      -190 kt
  Track:             275
- Speed:             190 kt
+ Speed:             191 kt
  Vertical rate:     -1536 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -3239,7 +3239,7 @@ SV:
  N/S velocity:      -62 kt
  E/W velocity:      61 kt
  Track:             135
- Speed:             86 kt
+ Speed:             87 kt
  Vertical rate:     576 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -3270,8 +3270,8 @@ SV:
  Altitude:          1300 ft (barometric)
  N/S velocity:      -232 kt
  E/W velocity:      68 kt
- Track:             163
- Speed:             241 kt
+ Track:             164
+ Speed:             242 kt
  Vertical rate:     832 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -3302,8 +3302,8 @@ SV:
  Altitude:          1300 ft (barometric)
  N/S velocity:      -232 kt
  E/W velocity:      71 kt
- Track:             162
- Speed:             242 kt
+ Track:             163
+ Speed:             243 kt
  Vertical rate:     960 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -3399,7 +3399,7 @@ SV:
  N/S velocity:      59 kt
  E/W velocity:      -102 kt
  Track:             300
- Speed:             117 kt
+ Speed:             118 kt
  Vertical rate:     -512 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -3431,7 +3431,7 @@ SV:
  N/S velocity:      43 kt
  E/W velocity:      -186 kt
  Track:             283
- Speed:             190 kt
+ Speed:             191 kt
  Vertical rate:     -2112 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -3480,7 +3480,7 @@ SV:
  N/S velocity:      -231 kt
  E/W velocity:      74 kt
  Track:             162
- Speed:             242 kt
+ Speed:             243 kt
  Vertical rate:     1088 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -3512,7 +3512,7 @@ SV:
  N/S velocity:      -231 kt
  E/W velocity:      75 kt
  Track:             162
- Speed:             242 kt
+ Speed:             243 kt
  Vertical rate:     1152 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -3543,7 +3543,7 @@ SV:
  Altitude:          1125 ft (barometric)
  N/S velocity:      -45 kt
  E/W velocity:      107 kt
- Track:             112
+ Track:             113
  Speed:             116 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -3562,7 +3562,7 @@ SV:
  Altitude:          1350 ft (barometric)
  N/S velocity:      -231 kt
  E/W velocity:      76 kt
- Track:             161
+ Track:             162
  Speed:             243 kt
  Vertical rate:     1152 ft/min (from geometric altitude)
  UTC coupling:      no
@@ -3594,7 +3594,7 @@ SV:
  Altitude:          1350 ft (barometric)
  N/S velocity:      -231 kt
  E/W velocity:      76 kt
- Track:             161
+ Track:             162
  Speed:             243 kt
  Vertical rate:     1152 ft/min (from geometric altitude)
  UTC coupling:      no
@@ -3626,8 +3626,8 @@ SV:
  Altitude:          450 ft (barometric)
  N/S velocity:      57 kt
  E/W velocity:      -103 kt
- Track:             298
- Speed:             117 kt
+ Track:             299
+ Speed:             118 kt
  Vertical rate:     -512 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -3658,8 +3658,8 @@ SV:
  Altitude:          1600 ft (barometric)
  N/S velocity:      114 kt
  E/W velocity:      -154 kt
- Track:             306
- Speed:             191 kt
+ Track:             307
+ Speed:             192 kt
  Vertical rate:     -2432 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -3691,7 +3691,7 @@ SV:
  N/S velocity:      -232 kt
  E/W velocity:      75 kt
  Track:             162
- Speed:             243 kt
+ Speed:             244 kt
  Vertical rate:     1216 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -3722,7 +3722,7 @@ SV:
  Altitude:          1125 ft (barometric)
  N/S velocity:      -45 kt
  E/W velocity:      107 kt
- Track:             112
+ Track:             113
  Speed:             116 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -3740,7 +3740,7 @@ SV:
  N/S velocity:      -232 kt
  E/W velocity:      75 kt
  Track:             162
- Speed:             243 kt
+ Speed:             244 kt
  Vertical rate:     1216 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -3771,7 +3771,7 @@ SV:
  Altitude:          825 ft (barometric)
  N/S velocity:      -62 kt
  E/W velocity:      60 kt
- Track:             135
+ Track:             136
  Speed:             86 kt
  Vertical rate:     512 ft/min (from barometric altitude)
  UTC coupling:      no
@@ -3835,7 +3835,7 @@ SV:
  Altitude:          1150 ft (barometric)
  N/S velocity:      -45 kt
  E/W velocity:      107 kt
- Track:             112
+ Track:             113
  Speed:             116 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -3884,7 +3884,7 @@ SV:
  Altitude:          1400 ft (barometric)
  N/S velocity:      -233 kt
  E/W velocity:      73 kt
- Track:             162
+ Track:             163
  Speed:             244 kt
  Vertical rate:     1344 ft/min (from geometric altitude)
  UTC coupling:      no
@@ -3948,7 +3948,7 @@ SV:
  Altitude:          425 ft (barometric)
  N/S velocity:      58 kt
  E/W velocity:      -102 kt
- Track:             299
+ Track:             300
  Speed:             117 kt
  Vertical rate:     -576 ft/min (from barometric altitude)
  UTC coupling:      no
@@ -3980,7 +3980,7 @@ SV:
  Altitude:          1150 ft (barometric)
  N/S velocity:      -45 kt
  E/W velocity:      107 kt
- Track:             112
+ Track:             113
  Speed:             116 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -4012,7 +4012,7 @@ SV:
  Altitude:          1400 ft (barometric)
  N/S velocity:      -233 kt
  E/W velocity:      73 kt
- Track:             162
+ Track:             163
  Speed:             244 kt
  Vertical rate:     1344 ft/min (from geometric altitude)
  UTC coupling:      no
@@ -4044,7 +4044,7 @@ SV:
  Altitude:          4875 ft (barometric)
  N/S velocity:      74 kt
  E/W velocity:      -266 kt
- Track:             285
+ Track:             286
  Speed:             276 kt
  Vertical rate:     -1920 ft/min (from barometric altitude)
  UTC coupling:      no
@@ -4076,8 +4076,8 @@ SV:
  Altitude:          1425 ft (barometric)
  N/S velocity:      -234 kt
  E/W velocity:      72 kt
- Track:             162
- Speed:             244 kt
+ Track:             163
+ Speed:             245 kt
  Vertical rate:     1344 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -4109,7 +4109,7 @@ SV:
  N/S velocity:      -234 kt
  E/W velocity:      71 kt
  Track:             163
- Speed:             244 kt
+ Speed:             245 kt
  Vertical rate:     1344 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -4140,7 +4140,7 @@ SV:
  Altitude:          1150 ft (barometric)
  N/S velocity:      -45 kt
  E/W velocity:      107 kt
- Track:             112
+ Track:             113
  Speed:             116 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -4222,7 +4222,7 @@ SV:
  N/S velocity:      69 kt
  E/W velocity:      -267 kt
  Track:             284
- Speed:             275 kt
+ Speed:             276 kt
  Vertical rate:     -1920 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -4253,7 +4253,7 @@ SV:
  Altitude:          1150 ft (barometric)
  N/S velocity:      -45 kt
  E/W velocity:      108 kt
- Track:             112
+ Track:             113
  Speed:             117 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -4272,7 +4272,7 @@ SV:
  Altitude:          400 ft (barometric)
  N/S velocity:      56 kt
  E/W velocity:      -102 kt
- Track:             298
+ Track:             299
  Speed:             116 kt
  Vertical rate:     -576 ft/min (from barometric altitude)
  UTC coupling:      no
@@ -4305,7 +4305,7 @@ SV:
  N/S velocity:      176 kt
  E/W velocity:      -74 kt
  Track:             337
- Speed:             190 kt
+ Speed:             191 kt
  Vertical rate:     -2304 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -4368,7 +4368,7 @@ SV:
  Altitude:          1150 ft (barometric)
  N/S velocity:      -45 kt
  E/W velocity:      108 kt
- Track:             112
+ Track:             113
  Speed:             117 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -4387,8 +4387,8 @@ SV:
  Altitude:          1475 ft (barometric)
  N/S velocity:      -236 kt
  E/W velocity:      69 kt
- Track:             163
- Speed:             245 kt
+ Track:             164
+ Speed:             246 kt
  Vertical rate:     1024 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -4420,7 +4420,7 @@ SV:
  N/S velocity:      -62 kt
  E/W velocity:      62 kt
  Track:             135
- Speed:             87 kt
+ Speed:             88 kt
  Vertical rate:     512 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -4451,7 +4451,7 @@ SV:
  Altitude:          4800 ft (barometric)
  N/S velocity:      66 kt
  E/W velocity:      -268 kt
- Track:             283
+ Track:             284
  Speed:             276 kt
  Vertical rate:     -1920 ft/min (from barometric altitude)
  UTC coupling:      no
@@ -4483,8 +4483,8 @@ SV:
  Altitude:          1325 ft (barometric)
  N/S velocity:      83 kt
  E/W velocity:      -157 kt
- Track:             297
- Speed:             177 kt
+ Track:             298
+ Speed:             178 kt
  Vertical rate:     -832 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -4515,8 +4515,8 @@ SV:
  Altitude:          1475 ft (barometric)
  N/S velocity:      -236 kt
  E/W velocity:      69 kt
- Track:             163
- Speed:             245 kt
+ Track:             164
+ Speed:             246 kt
  Vertical rate:     960 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -4547,7 +4547,7 @@ SV:
  Altitude:          1125 ft (barometric)
  N/S velocity:      -45 kt
  E/W velocity:      108 kt
- Track:             112
+ Track:             113
  Speed:             117 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -4564,8 +4564,8 @@ SV:
  Altitude:          1500 ft (barometric)
  N/S velocity:      -237 kt
  E/W velocity:      69 kt
- Track:             163
- Speed:             246 kt
+ Track:             164
+ Speed:             247 kt
  Vertical rate:     896 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -4596,7 +4596,7 @@ SV:
  Altitude:          375 ft (barometric)
  N/S velocity:      58 kt
  E/W velocity:      -102 kt
- Track:             299
+ Track:             300
  Speed:             117 kt
  Vertical rate:     -576 ft/min (from barometric altitude)
  UTC coupling:      no
@@ -4628,8 +4628,8 @@ SV:
  Altitude:          1500 ft (barometric)
  N/S velocity:      -237 kt
  E/W velocity:      69 kt
- Track:             163
- Speed:             246 kt
+ Track:             164
+ Speed:             247 kt
  Vertical rate:     896 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -4692,8 +4692,8 @@ SV:
  Altitude:          1500 ft (barometric)
  N/S velocity:      -237 kt
  E/W velocity:      69 kt
- Track:             163
- Speed:             246 kt
+ Track:             164
+ Speed:             247 kt
  Vertical rate:     768 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -4756,7 +4756,7 @@ SV:
  Altitude:          4750 ft (barometric)
  N/S velocity:      62 kt
  E/W velocity:      -270 kt
- Track:             282
+ Track:             283
  Speed:             277 kt
  Vertical rate:     -1856 ft/min (from barometric altitude)
  UTC coupling:      no
@@ -4788,7 +4788,7 @@ SV:
  Altitude:          1525 ft (barometric)
  N/S velocity:      -237 kt
  E/W velocity:      70 kt
- Track:             163
+ Track:             164
  Speed:             247 kt
  Vertical rate:     704 ft/min (from geometric altitude)
  UTC coupling:      no
@@ -4820,7 +4820,7 @@ SV:
  Altitude:          1125 ft (barometric)
  N/S velocity:      -45 kt
  E/W velocity:      108 kt
- Track:             112
+ Track:             113
  Speed:             117 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -4870,7 +4870,7 @@ SV:
  N/S velocity:      -45 kt
  E/W velocity:      109 kt
  Track:             112
- Speed:             117 kt
+ Speed:             118 kt
  Vertical rate:     -64 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -4887,7 +4887,7 @@ SV:
  N/S velocity:      -237 kt
  E/W velocity:      72 kt
  Track:             163
- Speed:             247 kt
+ Speed:             248 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -4950,7 +4950,7 @@ SV:
  Altitude:          1525 ft (barometric)
  N/S velocity:      -237 kt
  E/W velocity:      74 kt
- Track:             162
+ Track:             163
  Speed:             248 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      no
@@ -4982,8 +4982,8 @@ SV:
  Altitude:          350 ft (barometric)
  N/S velocity:      57 kt
  E/W velocity:      -103 kt
- Track:             298
- Speed:             117 kt
+ Track:             299
+ Speed:             118 kt
  Vertical rate:     -640 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -5047,7 +5047,7 @@ SV:
  N/S velocity:      -237 kt
  E/W velocity:      76 kt
  Track:             162
- Speed:             248 kt
+ Speed:             249 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -5079,7 +5079,7 @@ SV:
  N/S velocity:      -45 kt
  E/W velocity:      109 kt
  Track:             112
- Speed:             117 kt
+ Speed:             118 kt
  Vertical rate:     -64 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -5098,7 +5098,7 @@ SV:
  N/S velocity:      -62 kt
  E/W velocity:      61 kt
  Track:             135
- Speed:             86 kt
+ Speed:             87 kt
  Vertical rate:     512 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -5161,8 +5161,8 @@ SV:
  Altitude:          1550 ft (barometric)
  N/S velocity:      -237 kt
  E/W velocity:      79 kt
- Track:             161
- Speed:             249 kt
+ Track:             162
+ Speed:             250 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -5193,7 +5193,7 @@ SV:
  Altitude:          4675 ft (barometric)
  N/S velocity:      62 kt
  E/W velocity:      -270 kt
- Track:             282
+ Track:             283
  Speed:             277 kt
  Vertical rate:     -1792 ft/min (from barometric altitude)
  UTC coupling:      no
@@ -5225,8 +5225,8 @@ SV:
  Altitude:          1550 ft (barometric)
  N/S velocity:      -237 kt
  E/W velocity:      79 kt
- Track:             161
- Speed:             249 kt
+ Track:             162
+ Speed:             250 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -5258,7 +5258,7 @@ SV:
  N/S velocity:      -45 kt
  E/W velocity:      109 kt
  Track:             112
- Speed:             117 kt
+ Speed:             118 kt
  Vertical rate:     -64 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -5275,7 +5275,7 @@ SV:
  N/S velocity:      -235 kt
  E/W velocity:      84 kt
  Track:             160
- Speed:             249 kt
+ Speed:             250 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      no
  TIS-B site ID:     15
@@ -5307,7 +5307,7 @@ SV:
  N/S velocity:      59 kt
  E/W velocity:      -101 kt
  Track:             300
- Speed:             116 kt
+ Speed:             117 kt
  Vertical rate:     -640 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -5338,7 +5338,7 @@ SV:
  Altitude:          4250 ft (barometric)
  N/S velocity:      -85 kt
  E/W velocity:      69 kt
- Track:             140
+ Track:             141
  Speed:             109 kt
  Vertical rate:     -256 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -5355,8 +5355,8 @@ SV:
  Altitude:          4250 ft (barometric)
  N/S velocity:      -84 kt
  E/W velocity:      71 kt
- Track:             139
- Speed:             109 kt
+ Track:             140
+ Speed:             110 kt
  Vertical rate:     -256 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -5372,8 +5372,8 @@ SV:
  Altitude:          4225 ft (barometric)
  N/S velocity:      -78 kt
  E/W velocity:      73 kt
- Track:             136
- Speed:             106 kt
+ Track:             137
+ Speed:             107 kt
  Vertical rate:     -64 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -5406,8 +5406,8 @@ SV:
  Altitude:          4225 ft (barometric)
  N/S velocity:      -90 kt
  E/W velocity:      61 kt
- Track:             145
- Speed:             108 kt
+ Track:             146
+ Speed:             109 kt
  Vertical rate:     64 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -5425,8 +5425,8 @@ SV:
  Altitude:          4225 ft (barometric)
  N/S velocity:      -101 kt
  E/W velocity:      46 kt
- Track:             155
- Speed:             110 kt
+ Track:             156
+ Speed:             111 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -5457,7 +5457,7 @@ SV:
  Altitude:          4225 ft (barometric)
  N/S velocity:      -105 kt
  E/W velocity:      39 kt
- Track:             159
+ Track:             160
  Speed:             112 kt
  Vertical rate:     -128 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -5474,8 +5474,8 @@ SV:
  Altitude:          4200 ft (barometric)
  N/S velocity:      -112 kt
  E/W velocity:      26 kt
- Track:             166
- Speed:             114 kt
+ Track:             167
+ Speed:             115 kt
  Vertical rate:     -128 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -5491,7 +5491,7 @@ SV:
  Altitude:          4200 ft (barometric)
  N/S velocity:      -113 kt
  E/W velocity:      22 kt
- Track:             168
+ Track:             169
  Speed:             115 kt
  Vertical rate:     -128 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -5560,7 +5560,7 @@ SV:
  N/S velocity:      -113 kt
  E/W velocity:      -37 kt
  Track:             198
- Speed:             118 kt
+ Speed:             119 kt
  Vertical rate:     256 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -5578,7 +5578,7 @@ SV:
  Altitude:          4225 ft (barometric)
  N/S velocity:      -109 kt
  E/W velocity:      -48 kt
- Track:             203
+ Track:             204
  Speed:             119 kt
  Vertical rate:     192 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -5612,8 +5612,8 @@ SV:
  Altitude:          4225 ft (barometric)
  N/S velocity:      -99 kt
  E/W velocity:      -66 kt
- Track:             213
- Speed:             118 kt
+ Track:             214
+ Speed:             119 kt
  Vertical rate:     64 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -5629,7 +5629,7 @@ SV:
  Altitude:          4225 ft (barometric)
  N/S velocity:      -98 kt
  E/W velocity:      -68 kt
- Track:             214
+ Track:             215
  Speed:             119 kt
  Vertical rate:     64 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -5649,7 +5649,7 @@ SV:
  N/S velocity:      -81 kt
  E/W velocity:      -88 kt
  Track:             227
- Speed:             119 kt
+ Speed:             120 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -5697,7 +5697,7 @@ SV:
  Altitude:          4225 ft (barometric)
  N/S velocity:      -56 kt
  E/W velocity:      -105 kt
- Track:             241
+ Track:             242
  Speed:             119 kt
  Vertical rate:     -192 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -5747,7 +5747,7 @@ SV:
  N/S velocity:      -26 kt
  E/W velocity:      -115 kt
  Track:             257
- Speed:             117 kt
+ Speed:             118 kt
  Vertical rate:     -256 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -5765,8 +5765,8 @@ SV:
  Altitude:          4225 ft (barometric)
  N/S velocity:      -13 kt
  E/W velocity:      -116 kt
- Track:             263
- Speed:             116 kt
+ Track:             264
+ Speed:             117 kt
  Vertical rate:     -128 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -5782,8 +5782,8 @@ SV:
  Altitude:          3450 ft (barometric)
  N/S velocity:      50 kt
  E/W velocity:      -92 kt
- Track:             298
- Speed:             104 kt
+ Track:             299
+ Speed:             105 kt
  Vertical rate:     -448 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -5800,7 +5800,7 @@ SV:
  N/S velocity:      89 kt
  E/W velocity:      -32 kt
  Track:             340
- Speed:             94 kt
+ Speed:             95 kt
  Vertical rate:     -64 ft/min (from barometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -5816,7 +5816,7 @@ SV:
  Altitude:          4150 ft (barometric)
  N/S velocity:      -40 kt
  E/W velocity:      34 kt
- Track:             139
+ Track:             140
  Speed:             52 kt
  Vertical rate:     0 ft/min (from barometric altitude)
  UTC coupling:      no
@@ -5848,8 +5848,8 @@ SV:
  Altitude:          425 ft (barometric)
  N/S velocity:      30 kt
  E/W velocity:      97 kt
- Track:             72
- Speed:             101 kt
+ Track:             73
+ Speed:             102 kt
  Vertical rate:     832 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -5880,8 +5880,8 @@ SV:
  Altitude:          1700 ft (barometric)
  N/S velocity:      -64 kt
  E/W velocity:      49 kt
- Track:             142
- Speed:             80 kt
+ Track:             143
+ Speed:             81 kt
  Vertical rate:     640 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -5912,8 +5912,8 @@ SV:
  Altitude:          3450 ft (barometric)
  N/S velocity:      50 kt
  E/W velocity:      -92 kt
- Track:             298
- Speed:             104 kt
+ Track:             299
+ Speed:             105 kt
  Vertical rate:     -448 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -5932,7 +5932,7 @@ SV:
  N/S velocity:      66 kt
  E/W velocity:      -114 kt
  Track:             300
- Speed:             131 kt
+ Speed:             132 kt
  Vertical rate:     -384 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -5963,7 +5963,7 @@ SV:
  Altitude:          975 ft (barometric)
  N/S velocity:      -77 kt
  E/W velocity:      2 kt
- Track:             178
+ Track:             179
  Speed:             77 kt
  Vertical rate:     -704 ft/min (from barometric altitude)
  UTC coupling:      no
@@ -6014,8 +6014,8 @@ SV:
  Altitude:          750 ft (barometric)
  N/S velocity:      85 kt
  E/W velocity:      -40 kt
- Track:             334
- Speed:             93 kt
+ Track:             335
+ Speed:             94 kt
  Vertical rate:     64 ft/min (from barometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -6034,7 +6034,7 @@ SV:
  N/S velocity:      84 kt
  E/W velocity:      -42 kt
  Track:             333
- Speed:             93 kt
+ Speed:             94 kt
  Vertical rate:     64 ft/min (from barometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -6067,7 +6067,7 @@ SV:
  Altitude:          4200 ft (barometric)
  N/S velocity:      53 kt
  E/W velocity:      16 kt
- Track:             16
+ Track:             17
  Speed:             55 kt
  Vertical rate:     0 ft/min (from barometric altitude)
  UTC coupling:      no
@@ -6131,8 +6131,8 @@ SV:
  Altitude:          2875 ft (barometric)
  N/S velocity:      71 kt
  E/W velocity:      -111 kt
- Track:             302
- Speed:             131 kt
+ Track:             303
+ Speed:             132 kt
  Vertical rate:     -320 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -6163,8 +6163,8 @@ SV:
  Altitude:          3300 ft (barometric)
  N/S velocity:      -107 kt
  E/W velocity:      70 kt
- Track:             146
- Speed:             127 kt
+ Track:             147
+ Speed:             128 kt
  Vertical rate:     0 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -6195,7 +6195,7 @@ SV:
  Altitude:          1425 ft (barometric)
  N/S velocity:      88 kt
  E/W velocity:      -56 kt
- Track:             327
+ Track:             328
  Speed:             104 kt
  Vertical rate:     0 ft/min (from barometric altitude)
  UTC coupling:      no
@@ -6245,7 +6245,7 @@ SV:
  N/S velocity:      -45 kt
  E/W velocity:      19 kt
  Track:             157
- Speed:             48 kt
+ Speed:             49 kt
  Vertical rate:     0 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -6308,8 +6308,8 @@ SV:
  Altitude:          1725 ft (barometric)
  N/S velocity:      -64 kt
  E/W velocity:      49 kt
- Track:             142
- Speed:             80 kt
+ Track:             143
+ Speed:             81 kt
  Vertical rate:     576 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -6405,7 +6405,7 @@ SV:
  N/S velocity:      -106 kt
  E/W velocity:      68 kt
  Track:             147
- Speed:             125 kt
+ Speed:             126 kt
  Vertical rate:     0 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -6436,7 +6436,7 @@ SV:
  Altitude:          1400 ft (barometric)
  N/S velocity:      89 kt
  E/W velocity:      -54 kt
- Track:             328
+ Track:             329
  Speed:             104 kt
  Vertical rate:     -448 ft/min (from barometric altitude)
  UTC coupling:      no
@@ -6485,8 +6485,8 @@ SV:
  Altitude:          750 ft (barometric)
  N/S velocity:      79 kt
  E/W velocity:      -54 kt
- Track:             325
- Speed:             95 kt
+ Track:             326
+ Speed:             96 kt
  Vertical rate:     0 ft/min (from barometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -6521,7 +6521,7 @@ SV:
  Altitude:          750 ft (barometric)
  N/S velocity:      77 kt
  E/W velocity:      -59 kt
- Track:             322
+ Track:             323
  Speed:             97 kt
  Vertical rate:     -64 ft/min (from barometric altitude)
  UTC coupling:      yes
@@ -6538,8 +6538,8 @@ SV:
  Altitude:          3400 ft (barometric)
  N/S velocity:      48 kt
  E/W velocity:      -91 kt
- Track:             297
- Speed:             102 kt
+ Track:             298
+ Speed:             103 kt
  Vertical rate:     -640 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -6555,7 +6555,7 @@ SV:
  Altitude:          750 ft (barometric)
  N/S velocity:      76 kt
  E/W velocity:      -62 kt
- Track:             320
+ Track:             321
  Speed:             98 kt
  Vertical rate:     -192 ft/min (from barometric altitude)
  UTC coupling:      yes
@@ -6587,8 +6587,8 @@ SV:
  Altitude:          3350 ft (barometric)
  N/S velocity:      48 kt
  E/W velocity:      -91 kt
- Track:             297
- Speed:             102 kt
+ Track:             298
+ Speed:             103 kt
  Vertical rate:     -640 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -6604,8 +6604,8 @@ SV:
  Altitude:          3350 ft (barometric)
  N/S velocity:      48 kt
  E/W velocity:      -91 kt
- Track:             297
- Speed:             102 kt
+ Track:             298
+ Speed:             103 kt
  Vertical rate:     -640 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -6623,7 +6623,7 @@ SV:
  Altitude:          3350 ft (barometric)
  N/S velocity:      49 kt
  E/W velocity:      -90 kt
- Track:             298
+ Track:             299
  Speed:             102 kt
  Vertical rate:     -640 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -6640,7 +6640,7 @@ SV:
  Altitude:          3325 ft (barometric)
  N/S velocity:      49 kt
  E/W velocity:      -90 kt
- Track:             298
+ Track:             299
  Speed:             102 kt
  Vertical rate:     -640 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -6658,7 +6658,7 @@ SV:
  N/S velocity:      67 kt
  E/W velocity:      -111 kt
  Track:             301
- Speed:             129 kt
+ Speed:             130 kt
  Vertical rate:     -384 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -6721,8 +6721,8 @@ SV:
  Altitude:          1875 ft (barometric)
  N/S velocity:      -66 kt
  E/W velocity:      50 kt
- Track:             142
- Speed:             82 kt
+ Track:             143
+ Speed:             83 kt
  Vertical rate:     640 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -6785,8 +6785,8 @@ SV:
  Altitude:          2725 ft (barometric)
  N/S velocity:      67 kt
  E/W velocity:      -112 kt
- Track:             300
- Speed:             130 kt
+ Track:             301
+ Speed:             131 kt
  Vertical rate:     -448 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -6817,8 +6817,8 @@ SV:
  Altitude:          1075 ft (barometric)
  N/S velocity:      -23 kt
  E/W velocity:      68 kt
- Track:             108
- Speed:             71 kt
+ Track:             109
+ Speed:             72 kt
  Vertical rate:     0 ft/min (from barometric altitude)
  UTC coupling:      no
  TIS-B site ID:     1
@@ -6849,7 +6849,7 @@ SV:
  Altitude:          725 ft (barometric)
  N/S velocity:      66 kt
  E/W velocity:      -69 kt
- Track:             313
+ Track:             314
  Speed:             95 kt
  Vertical rate:     64 ft/min (from barometric altitude)
  UTC coupling:      yes
@@ -6882,7 +6882,7 @@ SV:
  N/S velocity:      50 kt
  E/W velocity:      -90 kt
  Track:             299
- Speed:             102 kt
+ Speed:             103 kt
  Vertical rate:     -320 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -6916,7 +6916,7 @@ SV:
  N/S velocity:      48 kt
  E/W velocity:      -93 kt
  Track:             297
- Speed:             104 kt
+ Speed:             105 kt
  Vertical rate:     -320 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -6979,7 +6979,7 @@ SV:
  Altitude:          725 ft (barometric)
  N/S velocity:      62 kt
  E/W velocity:      -75 kt
- Track:             309
+ Track:             310
  Speed:             97 kt
  Vertical rate:     -128 ft/min (from barometric altitude)
  UTC coupling:      yes
@@ -7015,8 +7015,8 @@ SV:
  Altitude:          700 ft (barometric)
  N/S velocity:      62 kt
  E/W velocity:      -77 kt
- Track:             308
- Speed:             98 kt
+ Track:             309
+ Speed:             99 kt
  Vertical rate:     -192 ft/min (from barometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -7034,8 +7034,8 @@ SV:
  Altitude:          700 ft (barometric)
  N/S velocity:      62 kt
  E/W velocity:      -77 kt
- Track:             308
- Speed:             98 kt
+ Track:             309
+ Speed:             99 kt
  Vertical rate:     -192 ft/min (from barometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -7051,8 +7051,8 @@ SV:
  Altitude:          3250 ft (barometric)
  N/S velocity:      45 kt
  E/W velocity:      -97 kt
- Track:             294
- Speed:             106 kt
+ Track:             295
+ Speed:             107 kt
  Vertical rate:     -256 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -7068,8 +7068,8 @@ SV:
  Altitude:          3250 ft (barometric)
  N/S velocity:      45 kt
  E/W velocity:      -97 kt
- Track:             294
- Speed:             106 kt
+ Track:             295
+ Speed:             107 kt
  Vertical rate:     -320 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -7188,7 +7188,7 @@ SV:
  N/S velocity:      45 kt
  E/W velocity:      -99 kt
  Track:             294
- Speed:             108 kt
+ Speed:             109 kt
  Vertical rate:     -384 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -7205,7 +7205,7 @@ SV:
  N/S velocity:      63 kt
  E/W velocity:      -75 kt
  Track:             310
- Speed:             97 kt
+ Speed:             98 kt
  Vertical rate:     -128 ft/min (from barometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -7236,8 +7236,8 @@ SV:
  Altitude:          3200 ft (barometric)
  N/S velocity:      43 kt
  E/W velocity:      -102 kt
- Track:             292
- Speed:             110 kt
+ Track:             293
+ Speed:             111 kt
  Vertical rate:     -320 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -7305,7 +7305,7 @@ SV:
  N/S velocity:      62 kt
  E/W velocity:      -73 kt
  Track:             310
- Speed:             95 kt
+ Speed:             96 kt
  Vertical rate:     128 ft/min (from barometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -7385,7 +7385,7 @@ SV:
  Altitude:          700 ft (barometric)
  N/S velocity:      62 kt
  E/W velocity:      -72 kt
- Track:             310
+ Track:             311
  Speed:             95 kt
  Vertical rate:     128 ft/min (from barometric altitude)
  UTC coupling:      yes
@@ -7402,7 +7402,7 @@ SV:
  Altitude:          700 ft (barometric)
  N/S velocity:      62 kt
  E/W velocity:      -72 kt
- Track:             310
+ Track:             311
  Speed:             95 kt
  Vertical rate:     192 ft/min (from barometric altitude)
  UTC coupling:      yes
@@ -7506,7 +7506,7 @@ SV:
  Altitude:          3175 ft (barometric)
  N/S velocity:      39 kt
  E/W velocity:      -104 kt
- Track:             290
+ Track:             291
  Speed:             111 kt
  Vertical rate:     -64 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -7561,8 +7561,8 @@ SV:
  Altitude:          3175 ft (barometric)
  N/S velocity:      38 kt
  E/W velocity:      -106 kt
- Track:             289
- Speed:             112 kt
+ Track:             290
+ Speed:             113 kt
  Vertical rate:     -128 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -7578,8 +7578,8 @@ SV:
  Altitude:          3175 ft (barometric)
  N/S velocity:      38 kt
  E/W velocity:      -106 kt
- Track:             289
- Speed:             112 kt
+ Track:             290
+ Speed:             113 kt
  Vertical rate:     -128 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -7646,8 +7646,8 @@ SV:
  Altitude:          3175 ft (barometric)
  N/S velocity:      36 kt
  E/W velocity:      -107 kt
- Track:             288
- Speed:             112 kt
+ Track:             289
+ Speed:             113 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -7663,7 +7663,7 @@ SV:
  Altitude:          1000 ft (barometric)
  N/S velocity:      -63 kt
  E/W velocity:      50 kt
- Track:             141
+ Track:             142
  Speed:             80 kt
  Vertical rate:     448 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -7750,7 +7750,7 @@ SV:
  Altitude:          3400 ft (barometric)
  N/S velocity:      -123 kt
  E/W velocity:      33 kt
- Track:             164
+ Track:             165
  Speed:             127 kt
  Vertical rate:     512 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -7782,7 +7782,7 @@ SV:
  Altitude:          3400 ft (barometric)
  N/S velocity:      -123 kt
  E/W velocity:      33 kt
- Track:             164
+ Track:             165
  Speed:             127 kt
  Vertical rate:     512 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -7799,7 +7799,7 @@ SV:
  Altitude:          3400 ft (barometric)
  N/S velocity:      -123 kt
  E/W velocity:      33 kt
- Track:             164
+ Track:             165
  Speed:             127 kt
  Vertical rate:     576 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -7819,7 +7819,7 @@ SV:
  N/S velocity:      -64 kt
  E/W velocity:      51 kt
  Track:             141
- Speed:             81 kt
+ Speed:             82 kt
  Vertical rate:     448 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -7836,7 +7836,7 @@ SV:
  N/S velocity:      -64 kt
  E/W velocity:      51 kt
  Track:             141
- Speed:             81 kt
+ Speed:             82 kt
  Vertical rate:     576 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -7852,7 +7852,7 @@ SV:
  Altitude:          3425 ft (barometric)
  N/S velocity:      -123 kt
  E/W velocity:      33 kt
- Track:             164
+ Track:             165
  Speed:             127 kt
  Vertical rate:     576 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -7870,7 +7870,7 @@ SV:
  N/S velocity:      -64 kt
  E/W velocity:      51 kt
  Track:             141
- Speed:             81 kt
+ Speed:             82 kt
  Vertical rate:     576 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -7888,8 +7888,8 @@ SV:
  Altitude:          3450 ft (barometric)
  N/S velocity:      -123 kt
  E/W velocity:      34 kt
- Track:             164
- Speed:             127 kt
+ Track:             165
+ Speed:             128 kt
  Vertical rate:     576 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -7905,8 +7905,8 @@ SV:
  Altitude:          3450 ft (barometric)
  N/S velocity:      -123 kt
  E/W velocity:      34 kt
- Track:             164
- Speed:             127 kt
+ Track:             165
+ Speed:             128 kt
  Vertical rate:     576 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -7938,7 +7938,7 @@ SV:
  N/S velocity:      -64 kt
  E/W velocity:      51 kt
  Track:             141
- Speed:             81 kt
+ Speed:             82 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -7955,7 +7955,7 @@ SV:
  N/S velocity:      -64 kt
  E/W velocity:      51 kt
  Track:             141
- Speed:             81 kt
+ Speed:             82 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -7987,7 +7987,7 @@ SV:
  N/S velocity:      -122 kt
  E/W velocity:      34 kt
  Track:             164
- Speed:             126 kt
+ Speed:             127 kt
  Vertical rate:     576 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -8004,7 +8004,7 @@ SV:
  N/S velocity:      -64 kt
  E/W velocity:      51 kt
  Track:             141
- Speed:             81 kt
+ Speed:             82 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -8036,7 +8036,7 @@ SV:
  N/S velocity:      -122 kt
  E/W velocity:      34 kt
  Track:             164
- Speed:             126 kt
+ Speed:             127 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -8055,7 +8055,7 @@ SV:
  N/S velocity:      -122 kt
  E/W velocity:      34 kt
  Track:             164
- Speed:             126 kt
+ Speed:             127 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -8091,7 +8091,7 @@ SV:
  N/S velocity:      -122 kt
  E/W velocity:      34 kt
  Track:             164
- Speed:             126 kt
+ Speed:             127 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -8107,7 +8107,7 @@ SV:
  Altitude:          3500 ft (barometric)
  N/S velocity:      -122 kt
  E/W velocity:      33 kt
- Track:             164
+ Track:             165
  Speed:             126 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8139,7 +8139,7 @@ SV:
  Altitude:          3500 ft (barometric)
  N/S velocity:      -122 kt
  E/W velocity:      33 kt
- Track:             164
+ Track:             165
  Speed:             126 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8156,7 +8156,7 @@ SV:
  Altitude:          3500 ft (barometric)
  N/S velocity:      -122 kt
  E/W velocity:      33 kt
- Track:             164
+ Track:             165
  Speed:             126 kt
  Vertical rate:     576 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8173,7 +8173,7 @@ SV:
  Altitude:          3525 ft (barometric)
  N/S velocity:      -122 kt
  E/W velocity:      33 kt
- Track:             164
+ Track:             165
  Speed:             126 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8192,7 +8192,7 @@ SV:
  Altitude:          3525 ft (barometric)
  N/S velocity:      -122 kt
  E/W velocity:      33 kt
- Track:             164
+ Track:             165
  Speed:             126 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8209,7 +8209,7 @@ SV:
  Altitude:          3550 ft (barometric)
  N/S velocity:      -122 kt
  E/W velocity:      33 kt
- Track:             164
+ Track:             165
  Speed:             126 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8258,7 +8258,7 @@ SV:
  Altitude:          3550 ft (barometric)
  N/S velocity:      -121 kt
  E/W velocity:      33 kt
- Track:             164
+ Track:             165
  Speed:             125 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8291,7 +8291,7 @@ SV:
  N/S velocity:      34 kt
  E/W velocity:      60 kt
  Track:             60
- Speed:             68 kt
+ Speed:             69 kt
  Vertical rate:     1280 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -8323,7 +8323,7 @@ SV:
  N/S velocity:      -121 kt
  E/W velocity:      34 kt
  Track:             164
- Speed:             125 kt
+ Speed:             126 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -8340,7 +8340,7 @@ SV:
  N/S velocity:      -121 kt
  E/W velocity:      34 kt
  Track:             164
- Speed:             125 kt
+ Speed:             126 kt
  Vertical rate:     704 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -8359,7 +8359,7 @@ SV:
  N/S velocity:      -120 kt
  E/W velocity:      34 kt
  Track:             164
- Speed:             124 kt
+ Speed:             125 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -8375,7 +8375,7 @@ SV:
  Altitude:          3600 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8392,7 +8392,7 @@ SV:
  Altitude:          3600 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8424,7 +8424,7 @@ SV:
  Altitude:          3625 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8441,7 +8441,7 @@ SV:
  Altitude:          3625 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8460,7 +8460,7 @@ SV:
  Altitude:          3650 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8479,7 +8479,7 @@ SV:
  Altitude:          3650 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8496,7 +8496,7 @@ SV:
  Altitude:          3650 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8528,7 +8528,7 @@ SV:
  Altitude:          3675 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8545,7 +8545,7 @@ SV:
  Altitude:          3675 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     704 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8562,7 +8562,7 @@ SV:
  Altitude:          3700 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     704 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8581,7 +8581,7 @@ SV:
  Altitude:          3700 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     704 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8598,7 +8598,7 @@ SV:
  Altitude:          3700 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8631,7 +8631,7 @@ SV:
  N/S velocity:      -41 kt
  E/W velocity:      67 kt
  Track:             121
- Speed:             78 kt
+ Speed:             79 kt
  Vertical rate:     1088 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -8647,7 +8647,7 @@ SV:
  Altitude:          3725 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8679,7 +8679,7 @@ SV:
  Altitude:          3725 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8696,7 +8696,7 @@ SV:
  Altitude:          3750 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     576 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8715,7 +8715,7 @@ SV:
  Altitude:          3750 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     576 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8732,7 +8732,7 @@ SV:
  Altitude:          3775 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     512 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8749,7 +8749,7 @@ SV:
  Altitude:          3775 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     512 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8781,7 +8781,7 @@ SV:
  Altitude:          3775 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     512 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8798,7 +8798,7 @@ SV:
  Altitude:          3775 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     512 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8817,7 +8817,7 @@ SV:
  Altitude:          3800 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     512 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8836,7 +8836,7 @@ SV:
  Altitude:          3800 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      35 kt
- Track:             163
+ Track:             164
  Speed:             125 kt
  Vertical rate:     512 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -8853,8 +8853,8 @@ SV:
  Altitude:          1225 ft (barometric)
  N/S velocity:      -76 kt
  E/W velocity:      60 kt
- Track:             141
- Speed:             96 kt
+ Track:             142
+ Speed:             97 kt
  Vertical rate:     192 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -8955,8 +8955,8 @@ SV:
  Altitude:          3850 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      37 kt
- Track:             162
- Speed:             125 kt
+ Track:             163
+ Speed:             126 kt
  Vertical rate:     576 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -8972,8 +8972,8 @@ SV:
  Altitude:          3850 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      37 kt
- Track:             162
- Speed:             125 kt
+ Track:             163
+ Speed:             126 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9004,8 +9004,8 @@ SV:
  Altitude:          3850 ft (barometric)
  N/S velocity:      -120 kt
  E/W velocity:      37 kt
- Track:             162
- Speed:             125 kt
+ Track:             163
+ Speed:             126 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9125,8 +9125,8 @@ SV:
  Altitude:          1250 ft (barometric)
  N/S velocity:      -68 kt
  E/W velocity:      60 kt
- Track:             138
- Speed:             90 kt
+ Track:             139
+ Speed:             91 kt
  Vertical rate:     384 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9174,8 +9174,8 @@ SV:
  Altitude:          1275 ft (barometric)
  N/S velocity:      -67 kt
  E/W velocity:      61 kt
- Track:             137
- Speed:             90 kt
+ Track:             138
+ Speed:             91 kt
  Vertical rate:     320 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9223,8 +9223,8 @@ SV:
  Altitude:          3950 ft (barometric)
  N/S velocity:      -119 kt
  E/W velocity:      37 kt
- Track:             162
- Speed:             124 kt
+ Track:             163
+ Speed:             125 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9242,8 +9242,8 @@ SV:
  Altitude:          3950 ft (barometric)
  N/S velocity:      -119 kt
  E/W velocity:      37 kt
- Track:             162
- Speed:             124 kt
+ Track:             163
+ Speed:             125 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9261,8 +9261,8 @@ SV:
  Altitude:          1275 ft (barometric)
  N/S velocity:      -63 kt
  E/W velocity:      64 kt
- Track:             134
- Speed:             89 kt
+ Track:             135
+ Speed:             90 kt
  Vertical rate:     192 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9280,8 +9280,8 @@ SV:
  Altitude:          3950 ft (barometric)
  N/S velocity:      -119 kt
  E/W velocity:      37 kt
- Track:             162
- Speed:             124 kt
+ Track:             163
+ Speed:             125 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9297,8 +9297,8 @@ SV:
  Altitude:          3975 ft (barometric)
  N/S velocity:      -119 kt
  E/W velocity:      37 kt
- Track:             162
- Speed:             124 kt
+ Track:             163
+ Speed:             125 kt
  Vertical rate:     640 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9330,7 +9330,7 @@ SV:
  N/S velocity:      -26 kt
  E/W velocity:      84 kt
  Track:             107
- Speed:             87 kt
+ Speed:             88 kt
  Vertical rate:     576 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9348,8 +9348,8 @@ SV:
  Altitude:          3975 ft (barometric)
  N/S velocity:      -119 kt
  E/W velocity:      37 kt
- Track:             162
- Speed:             124 kt
+ Track:             163
+ Speed:             125 kt
  Vertical rate:     576 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9365,8 +9365,8 @@ SV:
  Altitude:          2200 ft (barometric)
  N/S velocity:      -25 kt
  E/W velocity:      84 kt
- Track:             106
- Speed:             87 kt
+ Track:             107
+ Speed:             88 kt
  Vertical rate:     576 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9382,8 +9382,8 @@ SV:
  Altitude:          4000 ft (barometric)
  N/S velocity:      -119 kt
  E/W velocity:      37 kt
- Track:             162
- Speed:             124 kt
+ Track:             163
+ Speed:             125 kt
  Vertical rate:     576 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9400,7 +9400,7 @@ SV:
  N/S velocity:      -25 kt
  E/W velocity:      85 kt
  Track:             106
- Speed:             88 kt
+ Speed:             89 kt
  Vertical rate:     512 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9431,7 +9431,7 @@ SV:
  Altitude:          2225 ft (barometric)
  N/S velocity:      -24 kt
  E/W velocity:      85 kt
- Track:             105
+ Track:             106
  Speed:             88 kt
  Vertical rate:     512 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -9448,8 +9448,8 @@ SV:
  Altitude:          4000 ft (barometric)
  N/S velocity:      -119 kt
  E/W velocity:      37 kt
- Track:             162
- Speed:             124 kt
+ Track:             163
+ Speed:             125 kt
  Vertical rate:     576 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9502,7 +9502,7 @@ SV:
  N/S velocity:      -126 kt
  E/W velocity:      -67 kt
  Track:             208
- Speed:             142 kt
+ Speed:             143 kt
  Vertical rate:     -64 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9519,7 +9519,7 @@ SV:
  N/S velocity:      -22 kt
  E/W velocity:      86 kt
  Track:             104
- Speed:             88 kt
+ Speed:             89 kt
  Vertical rate:     -192 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9535,8 +9535,8 @@ SV:
  Altitude:          2200 ft (barometric)
  N/S velocity:      -22 kt
  E/W velocity:      85 kt
- Track:             104
- Speed:             87 kt
+ Track:             105
+ Speed:             88 kt
  Vertical rate:     -256 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9567,7 +9567,7 @@ SV:
  Altitude:          1775 ft (barometric)
  N/S velocity:      -128 kt
  E/W velocity:      -64 kt
- Track:             206
+ Track:             207
  Speed:             143 kt
  Vertical rate:     64 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -9584,7 +9584,7 @@ SV:
  Altitude:          1775 ft (barometric)
  N/S velocity:      -128 kt
  E/W velocity:      -64 kt
- Track:             206
+ Track:             207
  Speed:             143 kt
  Vertical rate:     64 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -9616,8 +9616,8 @@ SV:
  Altitude:          2175 ft (barometric)
  N/S velocity:      -22 kt
  E/W velocity:      85 kt
- Track:             104
- Speed:             87 kt
+ Track:             105
+ Speed:             88 kt
  Vertical rate:     -256 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9633,8 +9633,8 @@ SV:
  Altitude:          2175 ft (barometric)
  N/S velocity:      -22 kt
  E/W velocity:      84 kt
- Track:             104
- Speed:             86 kt
+ Track:             105
+ Speed:             87 kt
  Vertical rate:     -320 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9650,7 +9650,7 @@ SV:
  Altitude:          1800 ft (barometric)
  N/S velocity:      -128 kt
  E/W velocity:      -62 kt
- Track:             205
+ Track:             206
  Speed:             142 kt
  Vertical rate:     128 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -9668,7 +9668,7 @@ SV:
  N/S velocity:      -128 kt
  E/W velocity:      -61 kt
  Track:             205
- Speed:             141 kt
+ Speed:             142 kt
  Vertical rate:     128 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9687,7 +9687,7 @@ SV:
  N/S velocity:      -128 kt
  E/W velocity:      -61 kt
  Track:             205
- Speed:             141 kt
+ Speed:             142 kt
  Vertical rate:     256 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9723,7 +9723,7 @@ SV:
  N/S velocity:      -128 kt
  E/W velocity:      -61 kt
  Track:             205
- Speed:             141 kt
+ Speed:             142 kt
  Vertical rate:     320 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9740,7 +9740,7 @@ SV:
  N/S velocity:      -96 kt
  E/W velocity:      53 kt
  Track:             151
- Speed:             109 kt
+ Speed:             110 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9756,8 +9756,8 @@ SV:
  Altitude:          3425 ft (barometric)
  N/S velocity:      -95 kt
  E/W velocity:      53 kt
- Track:             150
- Speed:             108 kt
+ Track:             151
+ Speed:             109 kt
  Vertical rate:     -64 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9824,8 +9824,8 @@ SV:
  Altitude:          1950 ft (barometric)
  N/S velocity:      -129 kt
  E/W velocity:      -54 kt
- Track:             202
- Speed:             139 kt
+ Track:             203
+ Speed:             140 kt
  Vertical rate:     1088 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9842,7 +9842,7 @@ SV:
  N/S velocity:      -130 kt
  E/W velocity:      -51 kt
  Track:             201
- Speed:             139 kt
+ Speed:             140 kt
  Vertical rate:     1088 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9859,7 +9859,7 @@ SV:
  N/S velocity:      -131 kt
  E/W velocity:      -51 kt
  Track:             201
- Speed:             140 kt
+ Speed:             141 kt
  Vertical rate:     1024 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9890,7 +9890,7 @@ SV:
  Altitude:          2000 ft (barometric)
  N/S velocity:      -132 kt
  E/W velocity:      -48 kt
- Track:             199
+ Track:             200
  Speed:             140 kt
  Vertical rate:     1024 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -9926,8 +9926,8 @@ SV:
  Altitude:          2025 ft (barometric)
  N/S velocity:      -134 kt
  E/W velocity:      -46 kt
- Track:             198
- Speed:             141 kt
+ Track:             199
+ Speed:             142 kt
  Vertical rate:     832 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9963,7 +9963,7 @@ SV:
  N/S velocity:      -12 kt
  E/W velocity:      81 kt
  Track:             98
- Speed:             81 kt
+ Speed:             82 kt
  Vertical rate:     320 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9980,7 +9980,7 @@ SV:
  N/S velocity:      -137 kt
  E/W velocity:      -43 kt
  Track:             197
- Speed:             143 kt
+ Speed:             144 kt
  Vertical rate:     960 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -9997,7 +9997,7 @@ SV:
  N/S velocity:      -137 kt
  E/W velocity:      -43 kt
  Track:             197
- Speed:             143 kt
+ Speed:             144 kt
  Vertical rate:     1088 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -10015,7 +10015,7 @@ SV:
  Altitude:          3450 ft (barometric)
  N/S velocity:      -97 kt
  E/W velocity:      52 kt
- Track:             151
+ Track:             152
  Speed:             110 kt
  Vertical rate:     128 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -10033,7 +10033,7 @@ SV:
  N/S velocity:      -137 kt
  E/W velocity:      -43 kt
  Track:             197
- Speed:             143 kt
+ Speed:             144 kt
  Vertical rate:     1152 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -10050,7 +10050,7 @@ SV:
  N/S velocity:      -138 kt
  E/W velocity:      -43 kt
  Track:             197
- Speed:             144 kt
+ Speed:             145 kt
  Vertical rate:     1216 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -10082,7 +10082,7 @@ SV:
  N/S velocity:      -138 kt
  E/W velocity:      -43 kt
  Track:             197
- Speed:             144 kt
+ Speed:             145 kt
  Vertical rate:     1216 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -10114,7 +10114,7 @@ SV:
  N/S velocity:      -138 kt
  E/W velocity:      -43 kt
  Track:             197
- Speed:             144 kt
+ Speed:             145 kt
  Vertical rate:     1216 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -10131,7 +10131,7 @@ SV:
  N/S velocity:      -138 kt
  E/W velocity:      -43 kt
  Track:             197
- Speed:             144 kt
+ Speed:             145 kt
  Vertical rate:     1152 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -10150,7 +10150,7 @@ SV:
  N/S velocity:      -138 kt
  E/W velocity:      -43 kt
  Track:             197
- Speed:             144 kt
+ Speed:             145 kt
  Vertical rate:     1152 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -10166,7 +10166,7 @@ SV:
  Altitude:          3450 ft (barometric)
  N/S velocity:      -98 kt
  E/W velocity:      51 kt
- Track:             152
+ Track:             153
  Speed:             110 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -10183,8 +10183,8 @@ SV:
  Altitude:          2225 ft (barometric)
  N/S velocity:      -138 kt
  E/W velocity:      -44 kt
- Track:             197
- Speed:             144 kt
+ Track:             198
+ Speed:             145 kt
  Vertical rate:     1152 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -10200,7 +10200,7 @@ SV:
  Altitude:          3450 ft (barometric)
  N/S velocity:      -99 kt
  E/W velocity:      51 kt
- Track:             152
+ Track:             153
  Speed:             111 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -10220,7 +10220,7 @@ SV:
  N/S velocity:      -99 kt
  E/W velocity:      50 kt
  Track:             153
- Speed:             110 kt
+ Speed:             111 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -10237,7 +10237,7 @@ SV:
  N/S velocity:      -100 kt
  E/W velocity:      50 kt
  Track:             153
- Speed:             111 kt
+ Speed:             112 kt
  Vertical rate:     0 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -10253,7 +10253,7 @@ SV:
  Altitude:          2300 ft (barometric)
  N/S velocity:      -139 kt
  E/W velocity:      -45 kt
- Track:             197
+ Track:             198
  Speed:             146 kt
  Vertical rate:     1088 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -10272,7 +10272,7 @@ SV:
  Altitude:          2325 ft (barometric)
  N/S velocity:      -139 kt
  E/W velocity:      -45 kt
- Track:             197
+ Track:             198
  Speed:             146 kt
  Vertical rate:     1088 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -10308,8 +10308,8 @@ SV:
  Altitude:          2350 ft (barometric)
  N/S velocity:      -139 kt
  E/W velocity:      -47 kt
- Track:             198
- Speed:             146 kt
+ Track:             199
+ Speed:             147 kt
  Vertical rate:     1024 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -10410,8 +10410,8 @@ SV:
  Altitude:          2400 ft (barometric)
  N/S velocity:      -139 kt
  E/W velocity:      -50 kt
- Track:             199
- Speed:             147 kt
+ Track:             200
+ Speed:             148 kt
  Vertical rate:     1216 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0
@@ -10459,7 +10459,7 @@ SV:
  Altitude:          2450 ft (barometric)
  N/S velocity:      -138 kt
  E/W velocity:      -52 kt
- Track:             200
+ Track:             201
  Speed:             147 kt
  Vertical rate:     1280 ft/min (from geometric altitude)
  UTC coupling:      yes
@@ -10492,7 +10492,7 @@ SV:
  N/S velocity:      -138 kt
  E/W velocity:      -53 kt
  Track:             201
- Speed:             147 kt
+ Speed:             148 kt
  Vertical rate:     1280 ft/min (from geometric altitude)
  UTC coupling:      yes
  TIS-B site ID:     0

@@ -2,17 +2,17 @@
 //
 // Copyright 2015, Oliver Jowett <oliver@mutability.co.uk>
 //
-// This file is free software: you may copy, redistribute and/or modify it  
+// This file is free software: you may copy, redistribute and/or modify it
 // under the terms of the GNU General Public License as published by the
-// Free Software Foundation, either version 2 of the License, or (at your  
-// option) any later version.  
+// Free Software Foundation, either version 2 of the License, or (at your
+// option) any later version.
 //
-// This file is distributed in the hope that it will be useful, but  
-// WITHOUT ANY WARRANTY; without even the implied warranty of  
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU  
+// This file is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 // General Public License for more details.
 //
-// You should have received a copy of the GNU General Public License  
+// You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <math.h>
@@ -21,11 +21,12 @@
 
 #include "uat.h"
 #include "uat_decode.h"
+#include "math.h" // For rounding and stuff.
 
 static void uat_decode_hdr(uint8_t *frame, struct uat_adsb_mdb *mdb)
 {
     mdb->mdb_type = (frame[0] >> 3) & 0x1f;
-    mdb->address_qualifier = (address_qualifier_t) (frame[0] & 0x07);
+    mdb->address_qualifier = (address_qualifier_t)(frame[0] & 0x07);
     mdb->address = (frame[1] << 16) | (frame[2] << 8) | frame[3];
 }
 
@@ -37,8 +38,7 @@ static const char *address_qualifier_names[8] = {
     "Vehicle address",
     "Fixed ADS-B Beacon Address",
     "reserved (6)",
-    "reserved (7)"
-};    
+    "reserved (7)"};
 
 static void uat_display_hdr(const struct uat_adsb_mdb *mdb, FILE *to)
 {
@@ -46,14 +46,13 @@ static void uat_display_hdr(const struct uat_adsb_mdb *mdb, FILE *to)
             "HDR:\n"
             " MDB Type:          %d\n"
             " Address:           %06X (%s)\n",
-            mdb->mdb_type, 
+            mdb->mdb_type,
             mdb->address,
             address_qualifier_names[mdb->address_qualifier]);
 }
 
 static double dimensions_widths[16] = {
-    11.5, 23, 28.5, 34, 33, 38, 39.5, 45, 45, 52, 59.5, 67, 72.5, 80, 80, 90
-};
+    11.5, 23, 28.5, 34, 33, 38, 39.5, 45, 45, 52, 59.5, 67, 72.5, 80, 80, 90};
 
 static void uat_decode_sv(uint8_t *frame, struct uat_adsb_mdb *mdb)
 {
@@ -65,8 +64,9 @@ static void uat_decode_sv(uint8_t *frame, struct uat_adsb_mdb *mdb)
 
     raw_lat = (frame[4] << 15) | (frame[5] << 7) | (frame[6] >> 1);
     raw_lon = ((frame[6] & 0x01) << 23) | (frame[7] << 15) | (frame[8] << 7) | (frame[9] >> 1);
-    
-    if (mdb->nic != 0 || raw_lat != 0 || raw_lon != 0) {
+
+    if (mdb->nic != 0 || raw_lat != 0 || raw_lon != 0)
+    {
         mdb->position_valid = 1;
         mdb->lat = raw_lat * 360.0 / 16777216.0;
         if (mdb->lat > 90)
@@ -77,95 +77,113 @@ static void uat_decode_sv(uint8_t *frame, struct uat_adsb_mdb *mdb)
     }
 
     raw_alt = (frame[10] << 4) | ((frame[11] & 0xf0) >> 4);
-    if (raw_alt != 0) {
+    if (raw_alt != 0)
+    {
         mdb->altitude_type = (frame[9] & 1) ? ALT_GEO : ALT_BARO;
         mdb->altitude = (raw_alt - 1) * 25 - 1000;
     }
-    
+
     mdb->airground_state = (frame[12] >> 6) & 0x03;
 
-    switch (mdb->airground_state) {
+    switch (mdb->airground_state)
+    {
     case AG_SUBSONIC:
     case AG_SUPERSONIC:
+    {
+        int raw_ns, raw_ew, raw_vvel;
+
+        raw_ns = ((frame[12] & 0x1f) << 6) | ((frame[13] & 0xfc) >> 2);
+        if ((raw_ns & 0x3ff) != 0)
         {
-            int raw_ns, raw_ew, raw_vvel;
-            
-            raw_ns = ((frame[12] & 0x1f) << 6) | ((frame[13] & 0xfc) >> 2);        
-            if ((raw_ns & 0x3ff) != 0) {
-                mdb->ns_vel_valid = 1;
-                mdb->ns_vel = ((raw_ns & 0x3ff) - 1);
-                if (raw_ns & 0x400)
-                    mdb->ns_vel = 0 - mdb->ns_vel;
-                if (mdb->airground_state == AG_SUPERSONIC)
-                    mdb->ns_vel *= 4;
-            }
-            
-            raw_ew = ((frame[13] & 0x03) << 9) | (frame[14] << 1) | ((frame[15] & 0x80) >> 7);
-            if ((raw_ew & 0x3ff) != 0) {
-                mdb->ew_vel_valid = 1;
-                mdb->ew_vel = ((raw_ew & 0x3ff) - 1);
-                if (raw_ew & 0x400)
-                    mdb->ew_vel = 0 - mdb->ew_vel;
-                if (mdb->airground_state == AG_SUPERSONIC)
-                    mdb->ew_vel *= 4;
-            }
-            
-            if (mdb->ns_vel_valid && mdb->ew_vel_valid) {
-                if (mdb->ns_vel != 0 || mdb->ew_vel != 0) {
-                    mdb->track_type = TT_TRACK;
-                    mdb->track = (uint16_t)(360 + 90 - atan2(mdb->ns_vel, mdb->ew_vel) * 180 / M_PI) % 360;
-                }
-                
-                mdb->speed_valid = 1;
-                mdb->speed = (int) sqrt(mdb->ns_vel * mdb->ns_vel + mdb->ew_vel * mdb->ew_vel);
+            mdb->ns_vel_valid = 1;
+            mdb->ns_vel = ((raw_ns & 0x3ff) - 1);
+            if (raw_ns & 0x400)
+                mdb->ns_vel = 0 - mdb->ns_vel;
+            if (mdb->airground_state == AG_SUPERSONIC)
+                mdb->ns_vel *= 4;
+        }
+
+        raw_ew = ((frame[13] & 0x03) << 9) | (frame[14] << 1) | ((frame[15] & 0x80) >> 7);
+        if ((raw_ew & 0x3ff) != 0)
+        {
+            mdb->ew_vel_valid = 1;
+            mdb->ew_vel = ((raw_ew & 0x3ff) - 1);
+            if (raw_ew & 0x400)
+                mdb->ew_vel = 0 - mdb->ew_vel;
+            if (mdb->airground_state == AG_SUPERSONIC)
+                mdb->ew_vel *= 4;
+        }
+
+        if (mdb->ns_vel_valid && mdb->ew_vel_valid)
+        {
+            if (mdb->ns_vel != 0 || mdb->ew_vel != 0)
+            {
+                mdb->track_type = TT_TRACK;
+                mdb->track = (uint16_t)round((360.0 + 90.0 - atan2(mdb->ns_vel, mdb->ew_vel) * 180.0 / M_PI)) % 360;
             }
 
-            raw_vvel = ((frame[15] & 0x7f) << 4) | ((frame[16] & 0xf0) >> 4);
-            if ((raw_vvel & 0x1ff) != 0) {
-                mdb->vert_rate_source = (raw_vvel & 0x400) ? ALT_BARO : ALT_GEO;
-                mdb->vert_rate = ((raw_vvel & 0x1ff) - 1) * 64;
-                if (raw_vvel & 0x200)
-                    mdb->vert_rate = 0 - mdb->vert_rate;
-            }                
+            mdb->speed_valid = 1;
+            mdb->speed = (int)round(sqrt(mdb->ns_vel * mdb->ns_vel + mdb->ew_vel * mdb->ew_vel));
         }
-        break;
+
+        raw_vvel = ((frame[15] & 0x7f) << 4) | ((frame[16] & 0xf0) >> 4);
+        if ((raw_vvel & 0x1ff) != 0)
+        {
+            mdb->vert_rate_source = (raw_vvel & 0x400) ? ALT_BARO : ALT_GEO;
+            mdb->vert_rate = ((raw_vvel & 0x1ff) - 1) * 64;
+            if (raw_vvel & 0x200)
+                mdb->vert_rate = 0 - mdb->vert_rate;
+        }
+    }
+    break;
 
     case AG_GROUND:
+    {
+        int raw_gs, raw_track;
+
+        raw_gs = ((frame[12] & 0x1f) << 6) | ((frame[13] & 0xfc) >> 2);
+        if (raw_gs != 0)
         {
-            int raw_gs, raw_track;
-
-            raw_gs = ((frame[12] & 0x1f) << 6) | ((frame[13] & 0xfc) >> 2);
-            if (raw_gs != 0) {
-                mdb->speed_valid = 1;
-                mdb->speed = ((raw_gs & 0x3ff) - 1);
-            }
-
-            raw_track = ((frame[13] & 0x03) << 9) | (frame[14] << 1) | ((frame[15] & 0x80) >> 7);
-            switch ((raw_track & 0x0600)>>9) {
-            case 1: mdb->track_type = TT_TRACK; break;
-            case 2: mdb->track_type = TT_MAG_HEADING; break;
-            case 3: mdb->track_type = TT_TRUE_HEADING; break;
-            }
-
-            if (mdb->track_type != TT_INVALID)
-                mdb->track = (raw_track & 0x1ff) * 360 / 512;
-
-            mdb->dimensions_valid = 1;
-            mdb->length = 15 + 10 * ((frame[15] & 0x38) >> 3);
-            mdb->width = dimensions_widths[(frame[15] & 0x78) >> 3];
-            mdb->position_offset = (frame[15] & 0x04) ? 1 : 0;
+            mdb->speed_valid = 1;
+            mdb->speed = ((raw_gs & 0x3ff) - 1);
         }
-        break;
+
+        raw_track = ((frame[13] & 0x03) << 9) | (frame[14] << 1) | ((frame[15] & 0x80) >> 7);
+        switch ((raw_track & 0x0600) >> 9)
+        {
+        case 1:
+            mdb->track_type = TT_TRACK;
+            break;
+        case 2:
+            mdb->track_type = TT_MAG_HEADING;
+            break;
+        case 3:
+            mdb->track_type = TT_TRUE_HEADING;
+            break;
+        }
+
+        if (mdb->track_type != TT_INVALID)
+            mdb->track = (raw_track & 0x1ff) * 360 / 512;
+
+        mdb->dimensions_valid = 1;
+        mdb->length = 15 + 10 * ((frame[15] & 0x38) >> 3);
+        mdb->width = dimensions_widths[(frame[15] & 0x78) >> 3];
+        mdb->position_offset = (frame[15] & 0x04) ? 1 : 0;
+    }
+    break;
 
     case AG_RESERVED:
         // nothing
         break;
     }
-    
-    if ((frame[0] & 7) == 2 || (frame[0] & 7) == 3) {
+
+    if ((frame[0] & 7) == 2 || (frame[0] & 7) == 3)
+    {
         mdb->utc_coupled = 0;
         mdb->tisb_site_id = (frame[16] & 0x0f);
-    } else {
+    }
+    else
+    {
         mdb->utc_coupled = (frame[16] & 0x08) ? 1 : 0;
         mdb->tisb_site_id = 0;
     }
@@ -188,7 +206,8 @@ static void uat_display_sv(const struct uat_adsb_mdb *mdb, FILE *to)
                 mdb->lat,
                 mdb->lon);
 
-    switch (mdb->altitude_type) {
+    switch (mdb->altitude_type)
+    {
     case ALT_BARO:
         fprintf(to,
                 " Altitude:          %d ft (barometric)\n",
@@ -213,7 +232,8 @@ static void uat_display_sv(const struct uat_adsb_mdb *mdb, FILE *to)
                 " E/W velocity:      %d kt\n",
                 mdb->ew_vel);
 
-    switch (mdb->track_type) {
+    switch (mdb->track_type)
+    {
     case TT_TRACK:
         fprintf(to,
                 " Track:             %u\n",
@@ -237,9 +257,9 @@ static void uat_display_sv(const struct uat_adsb_mdb *mdb, FILE *to)
         fprintf(to,
                 " Speed:             %u kt\n",
                 mdb->speed);
-        
 
-    switch (mdb->vert_rate_source) {
+    switch (mdb->vert_rate_source)
+    {
     case ALT_BARO:
         fprintf(to,
                 " Vertical rate:     %d ft/min (from barometric altitude)\n",
@@ -253,13 +273,13 @@ static void uat_display_sv(const struct uat_adsb_mdb *mdb, FILE *to)
     default:
         break;
     }
-        
+
     if (mdb->dimensions_valid)
         fprintf(to,
                 " Dimensions:        %.1fm L x %.1fm W%s\n",
                 mdb->length, mdb->width,
                 mdb->position_offset ? " (position offset applied)" : "");
-    
+
     fprintf(to,
             " UTC coupling:      %s\n"
             " TIS-B site ID:     %u\n",
@@ -275,22 +295,23 @@ static void uat_decode_ms(uint8_t *frame, struct uat_adsb_mdb *mdb)
 
     mdb->has_ms = 1;
 
-    v = (frame[17]<<8) | (frame[18]);
-    mdb->emitter_category = (v/1600) % 40;
-    mdb->callsign[0] = base40_alphabet[(v/40) % 40];
+    v = (frame[17] << 8) | (frame[18]);
+    mdb->emitter_category = (v / 1600) % 40;
+    mdb->callsign[0] = base40_alphabet[(v / 40) % 40];
     mdb->callsign[1] = base40_alphabet[v % 40];
-    v = (frame[19]<<8) | (frame[20]);
-    mdb->callsign[2] = base40_alphabet[(v/1600) % 40];
-    mdb->callsign[3] = base40_alphabet[(v/40) % 40];
+    v = (frame[19] << 8) | (frame[20]);
+    mdb->callsign[2] = base40_alphabet[(v / 1600) % 40];
+    mdb->callsign[3] = base40_alphabet[(v / 40) % 40];
     mdb->callsign[4] = base40_alphabet[v % 40];
-    v = (frame[21]<<8) | (frame[22]);
-    mdb->callsign[5] = base40_alphabet[(v/1600) % 40];
-    mdb->callsign[6] = base40_alphabet[(v/40) % 40];
+    v = (frame[21] << 8) | (frame[22]);
+    mdb->callsign[5] = base40_alphabet[(v / 1600) % 40];
+    mdb->callsign[6] = base40_alphabet[(v / 40) % 40];
     mdb->callsign[7] = base40_alphabet[v % 40];
     mdb->callsign[8] = 0;
 
     // trim trailing spaces
-    for (i = 7; i >= 0; --i) {
+    for (i = 7; i >= 0; --i)
+    {
         if (mdb->callsign[i] == ' ')
             mdb->callsign[i] = 0;
         else
@@ -315,30 +336,30 @@ static void uat_decode_ms(uint8_t *frame, struct uat_adsb_mdb *mdb)
 }
 
 static const char *emitter_category_names[40] = {
-    "No information",                          // A0
+    "No information", // A0
     "Light <= 7000kg",
     "Medium Wake 7000-34000kg",
     "Medium Wake 34000-136000kg",
     "Medium Wake High Vortex 34000-136000kg",
     "Heavy >= 136000kg",
     "Highly Maneuverable",
-    "Rotorcraft",                              // A7
-    "reserved (8)",                            // B0
+    "Rotorcraft",   // A7
+    "reserved (8)", // B0
     "Glider/Sailplane",
     "Lighter than air",
     "Parachutist / sky diver",
     "Ultra light / hang glider / paraglider",
     "reserved (13)",
     "UAV",
-    "Space / transatmospheric",                // B7
-    "reserved (16)",                           // C0
+    "Space / transatmospheric", // B7
+    "reserved (16)",            // C0
     "Emergency vehicle",
     "Service vehicle",
     "Point obstacle",
     "Cluster obstacle",
     "Line obstacle",
     "reserved (22)",
-    "reserved (23)",                           // C7
+    "reserved (23)", // C7
     "reserved (24)",
     "reserved (25)",
     "reserved (26)",
@@ -354,8 +375,7 @@ static const char *emitter_category_names[40] = {
     "reserved (36)",
     "reserved (37)",
     "reserved (38)",
-    "reserved (39)"
-};    
+    "reserved (39)"};
 
 static const char *emergency_status_names[8] = {
     "No emergency",
@@ -365,8 +385,7 @@ static const char *emergency_status_names[8] = {
     "No communications",
     "Unlawful interference",
     "Downed aircraft",
-    "reserved"
-};
+    "reserved"};
 
 static void uat_display_ms(const struct uat_adsb_mdb *mdb, FILE *to)
 {
@@ -405,16 +424,18 @@ static void uat_display_ms(const struct uat_adsb_mdb *mdb, FILE *to)
 static void uat_decode_auxsv(uint8_t *frame, struct uat_adsb_mdb *mdb)
 {
     int raw_alt = (frame[29] << 4) | ((frame[30] & 0xf0) >> 4);
-    if (raw_alt != 0) {
+    if (raw_alt != 0)
+    {
         mdb->sec_altitude = (raw_alt - 1) * 25 - 1000;
         mdb->sec_altitude_type = (frame[9] & 1) ? ALT_BARO : ALT_GEO;
-    } else {
+    }
+    else
+    {
         mdb->sec_altitude_type = ALT_INVALID;
     }
 
     mdb->has_auxsv = 1;
-}    
-
+}
 
 static void uat_display_auxsv(const struct uat_adsb_mdb *mdb, FILE *to)
 {
@@ -424,7 +445,8 @@ static void uat_display_auxsv(const struct uat_adsb_mdb *mdb, FILE *to)
     fprintf(to,
             "AUXSV:\n");
 
-    switch (mdb->sec_altitude_type) {
+    switch (mdb->sec_altitude_type)
+    {
     case ALT_BARO:
         fprintf(to,
                 " Sec. altitude:     %d ft (barometric)\n",
@@ -434,7 +456,7 @@ static void uat_display_auxsv(const struct uat_adsb_mdb *mdb, FILE *to)
         fprintf(to,
                 " Sec. altitude:     %d ft (geometric)\n",
                 mdb->sec_altitude);
-        break;        
+        break;
     default:
         fprintf(to,
                 " Sec. altitude:     unavailable\n");
@@ -448,14 +470,15 @@ void uat_decode_adsb_mdb(uint8_t *frame, struct uat_adsb_mdb *mdb)
 
     *mdb = mdb_zero;
 
-    uat_decode_hdr(frame, mdb);   
+    uat_decode_hdr(frame, mdb);
 
-    switch (mdb->mdb_type) {
-    case 0: // HDR SV
-    case 4: // HDR SV (TC+0) (TS)
-    case 7: // HDR SV reserved
-    case 8: // HDR SV reserved
-    case 9: // HDR SV reserved
+    switch (mdb->mdb_type)
+    {
+    case 0:  // HDR SV
+    case 4:  // HDR SV (TC+0) (TS)
+    case 7:  // HDR SV reserved
+    case 8:  // HDR SV reserved
+    case 9:  // HDR SV reserved
     case 10: // HDR SV reserved
         uat_decode_sv(frame, mdb);
         break;
@@ -491,7 +514,6 @@ void uat_display_adsb_mdb(const struct uat_adsb_mdb *mdb, FILE *to)
     uat_display_auxsv(mdb, to);
 }
 
-
 static void uat_decode_info_frame(struct uat_uplink_info_frame *frame)
 {
     unsigned t_opt;
@@ -506,7 +528,8 @@ static void uat_decode_info_frame(struct uat_uplink_info_frame *frame)
 
     t_opt = ((frame->data[1] & 0x01) << 1) | (frame->data[2] >> 7);
 
-    switch (t_opt) {
+    switch (t_opt)
+    {
     case 0: // Hours, Minutes
         frame->fisb.monthday_valid = 0;
         frame->fisb.seconds_valid = 0;
@@ -571,7 +594,7 @@ void uat_decode_uplink_mdb(uint8_t *frame, struct uat_uplink_mdb *mdb)
     /*if (mdb->position_valid)*/ {
         uint32_t raw_lat = (frame[0] << 15) | (frame[1] << 7) | (frame[2] >> 1);
         uint32_t raw_lon = ((frame[2] & 0x01) << 23) | (frame[3] << 15) | (frame[4] << 7) | (frame[5] >> 1);
-        
+
         mdb->lat = raw_lat * 360.0 / 16777216.0;
         if (mdb->lat > 90)
             mdb->lat -= 180;
@@ -585,24 +608,28 @@ void uat_decode_uplink_mdb(uint8_t *frame, struct uat_uplink_mdb *mdb)
     mdb->slot_id = (frame[6] & 0x1f);
     mdb->tisb_site_id = (frame[7] >> 4);
 
-    if (mdb->app_data_valid) {
+    if (mdb->app_data_valid)
+    {
         uint8_t *data, *end;
 
-        memcpy(mdb->app_data, frame+8, 424);
+        memcpy(mdb->app_data, frame + 8, 424);
         mdb->num_info_frames = 0;
-        
+
         data = mdb->app_data;
         end = mdb->app_data + 424;
-        while (mdb->num_info_frames < UPLINK_MAX_INFO_FRAMES && data+2 <= end) {
+        while (mdb->num_info_frames < UPLINK_MAX_INFO_FRAMES && data + 2 <= end)
+        {
             struct uat_uplink_info_frame *frame = &mdb->info_frames[mdb->num_info_frames];
             frame->length = (data[0] << 1) | (data[1] >> 7);
             frame->type = (data[1] & 0x0f);
-            if (data + frame->length + 2 > end) {
+            if (data + frame->length + 2 > end)
+            {
                 // overrun?
                 break;
             }
 
-            if (frame->length == 0 && frame->type == 0) {
+            if (frame->length == 0 && frame->type == 0)
+            {
                 break; // no more frames
             }
 
@@ -622,22 +649,25 @@ static void display_generic_data(uint8_t *data, uint16_t length, FILE *to)
 
     fprintf(to,
             " Data:              ");
-    for (i = 0; i < length; i += 16) {
+    for (i = 0; i < length; i += 16)
+    {
         unsigned j;
-        
+
         if (i > 0)
             fprintf(to,
                     "                    ");
-        
-        for (j = i; j < i+16; ++j) {
+
+        for (j = i; j < i + 16; ++j)
+        {
             if (j < length)
                 fprintf(to, "%02X ", data[j]);
             else
                 fprintf(to, "   ");
         }
-        
-        for (j = i; j < i+16 && j < length; ++j) {
-            fprintf(to, "%c", 
+
+        for (j = i; j < i + 16 && j < length; ++j)
+        {
+            fprintf(to, "%c",
                     (data[j] >= 32 && data[j] < 127) ? data[j] : '.');
         }
         fprintf(to, "\n");
@@ -645,7 +675,8 @@ static void display_generic_data(uint8_t *data, uint16_t length, FILE *to)
 }
 
 // The odd two-string-literals here is to avoid \0x3ABCDEF being interpreted as a single (very large valued) character
-static const char *dlac_alphabet = "\x03" "ABCDEFGHIJKLMNOPQRSTUVWXYZ\x1A\t\x1E\n| !\"#$%&'()*+,-./0123456789:;<=>?";
+static const char *dlac_alphabet = "\x03"
+                                   "ABCDEFGHIJKLMNOPQRSTUVWXYZ\x1A\t\x1E\n| !\"#$%&'()*+,-./0123456789:;<=>?";
 
 static const char *decode_dlac(uint8_t *data, unsigned bytelen)
 {
@@ -654,12 +685,14 @@ static const char *decode_dlac(uint8_t *data, unsigned bytelen)
     char *p = buf;
     int step = 0;
     int tab = 0;
-    
-    while (data < end) {
+
+    while (data < end)
+    {
         int ch;
 
         assert(step >= 0 && step <= 3);
-        switch (step) {
+        switch (step)
+        {
         case 0:
             ch = data[0] >> 2;
             ++data;
@@ -677,103 +710,213 @@ static const char *decode_dlac(uint8_t *data, unsigned bytelen)
             break;
         }
 
-        if (tab) {
+        if (tab)
+        {
             while (ch > 0)
                 *p++ = ' ', ch--;
             tab = 0;
-        } else if (ch == 28) { // tab
+        }
+        else if (ch == 28)
+        { // tab
             tab = 1;
-        } else {
+        }
+        else
+        {
             *p++ = dlac_alphabet[ch];
         }
 
-        step = (step+1)%4;
+        step = (step + 1) % 4;
     }
 
     *p = 0;
     return buf;
 }
-    
+
 static const char *get_fisb_product_name(uint16_t product_id)
 {
-    switch (product_id) {
-    case 0: case 20: return "METAR and SPECI";
-    case 1: case 21: return "TAF and Amended TAF";
-    case 2: case 22: return "SIGMET";
-    case 3: case 23: return "Convective SIGMET";
-    case 4: case 24: return "AIRMET";
-    case 5: case 25: return "PIREP";
-    case 6: case 26: return "AWW";
-    case 7: case 27: return "Winds and Temperatures Aloft";
-    case 8: return "NOTAM (Including TFRs) and Service Status";
-    case 9: return "Aerodrome and Airspace – D-ATIS";
-    case 10: return "Aerodrome and Airspace - TWIP";
-    case 11: return "Aerodrome and Airspace - AIRMET";
-    case 12: return "Aerodrome and Airspace - SIGMET/Convective SIGMET";
-    case 13: return "Aerodrome and Airspace - SUA Status";
-    case 51: return "National NEXRAD, Type 0 - 4 level";
-    case 52: return "National NEXRAD, Type 1 - 8 level (quasi 6-level VIP)";
-    case 53: return "National NEXRAD, Type 2 - 8 level";
-    case 54: return "National NEXRAD, Type 3 - 16 level";
-    case 55: return "Regional NEXRAD, Type 0 - low dynamic range";
-    case 56: return "Regional NEXRAD, Type 1 - 8 level (quasi 6-level VIP)";
-    case 57: return "Regional NEXRAD, Type 2 - 8 level";
-    case 58: return "Regional NEXRAD, Type 3 - 16 level";
-    case 59: return "Individual NEXRAD, Type 0 - low dynamic range";
-    case 60: return "Individual NEXRAD, Type 1 - 8 level (quasi 6-level VIP)";
-    case 61: return "Individual NEXRAD, Type 2 - 8 level";
-    case 62: return "Individual NEXRAD, Type 3 - 16 level";
-    case 63: return "Global Block Representation - Regional NEXRAD, Type 4 – 8 level";
-    case 64: return "Global Block Representation - CONUS NEXRAD, Type 4 - 8 level";
-    case 81: return "Radar echo tops graphic, scheme 1: 16-level";
-    case 82: return "Radar echo tops graphic, scheme 2: 8-level";
-    case 83: return "Storm tops and velocity";
-    case 101: return "Lightning strike type 1 (pixel level)";
-    case 102: return "Lightning strike type 2 (grid element level)";
-    case 151: return "Point phenomena, vector format";
-    case 201: return "Surface conditions/winter precipitation graphic";
-    case 202: return "Surface weather systems";
-    case 254: return "AIRMET, SIGMET: Bitmap encoding";
-    case 351: return "System Time";
-    case 352: return "Operational Status";
-    case 353: return "Ground Station Status";
-    case 401: return "Generic Raster Scan Data Product APDU Payload Format Type 1";
-    case 402: case 411: return "Generic Textual Data Product APDU Payload Format Type 1";
-    case 403: return "Generic Vector Data Product APDU Payload Format Type 1";
-    case 404: case 412: return "Generic Symbolic Product APDU Payload Format Type 1";
-    case 405: case 413: return "Generic Textual Data Product APDU Payload Format Type 2";
-    case 600: return "FISDL Products – Proprietary Encoding";
-    case 2000: return "FAA/FIS-B Product 1 – Developmental";
-    case 2001: return "FAA/FIS-B Product 2 – Developmental";
-    case 2002: return "FAA/FIS-B Product 3 – Developmental";
-    case 2003: return "FAA/FIS-B Product 4 – Developmental";
-    case 2004: return "WSI Products - Proprietary Encoding";
-    case 2005: return "WSI Developmental Products";
-    default: return "unknown";
+    switch (product_id)
+    {
+    case 0:
+    case 20:
+        return "METAR and SPECI";
+    case 1:
+    case 21:
+        return "TAF and Amended TAF";
+    case 2:
+    case 22:
+        return "SIGMET";
+    case 3:
+    case 23:
+        return "Convective SIGMET";
+    case 4:
+    case 24:
+        return "AIRMET";
+    case 5:
+    case 25:
+        return "PIREP";
+    case 6:
+    case 26:
+        return "AWW";
+    case 7:
+    case 27:
+        return "Winds and Temperatures Aloft";
+    case 8:
+        return "NOTAM (Including TFRs) and Service Status";
+    case 9:
+        return "Aerodrome and Airspace – D-ATIS";
+    case 10:
+        return "Aerodrome and Airspace - TWIP";
+    case 11:
+        return "Aerodrome and Airspace - AIRMET";
+    case 12:
+        return "Aerodrome and Airspace - SIGMET/Convective SIGMET";
+    case 13:
+        return "Aerodrome and Airspace - SUA Status";
+    case 51:
+        return "National NEXRAD, Type 0 - 4 level";
+    case 52:
+        return "National NEXRAD, Type 1 - 8 level (quasi 6-level VIP)";
+    case 53:
+        return "National NEXRAD, Type 2 - 8 level";
+    case 54:
+        return "National NEXRAD, Type 3 - 16 level";
+    case 55:
+        return "Regional NEXRAD, Type 0 - low dynamic range";
+    case 56:
+        return "Regional NEXRAD, Type 1 - 8 level (quasi 6-level VIP)";
+    case 57:
+        return "Regional NEXRAD, Type 2 - 8 level";
+    case 58:
+        return "Regional NEXRAD, Type 3 - 16 level";
+    case 59:
+        return "Individual NEXRAD, Type 0 - low dynamic range";
+    case 60:
+        return "Individual NEXRAD, Type 1 - 8 level (quasi 6-level VIP)";
+    case 61:
+        return "Individual NEXRAD, Type 2 - 8 level";
+    case 62:
+        return "Individual NEXRAD, Type 3 - 16 level";
+    case 63:
+        return "Global Block Representation - Regional NEXRAD, Type 4 – 8 level";
+    case 64:
+        return "Global Block Representation - CONUS NEXRAD, Type 4 - 8 level";
+    case 81:
+        return "Radar echo tops graphic, scheme 1: 16-level";
+    case 82:
+        return "Radar echo tops graphic, scheme 2: 8-level";
+    case 83:
+        return "Storm tops and velocity";
+    case 101:
+        return "Lightning strike type 1 (pixel level)";
+    case 102:
+        return "Lightning strike type 2 (grid element level)";
+    case 151:
+        return "Point phenomena, vector format";
+    case 201:
+        return "Surface conditions/winter precipitation graphic";
+    case 202:
+        return "Surface weather systems";
+    case 254:
+        return "AIRMET, SIGMET: Bitmap encoding";
+    case 351:
+        return "System Time";
+    case 352:
+        return "Operational Status";
+    case 353:
+        return "Ground Station Status";
+    case 401:
+        return "Generic Raster Scan Data Product APDU Payload Format Type 1";
+    case 402:
+    case 411:
+        return "Generic Textual Data Product APDU Payload Format Type 1";
+    case 403:
+        return "Generic Vector Data Product APDU Payload Format Type 1";
+    case 404:
+    case 412:
+        return "Generic Symbolic Product APDU Payload Format Type 1";
+    case 405:
+    case 413:
+        return "Generic Textual Data Product APDU Payload Format Type 2";
+    case 600:
+        return "FISDL Products – Proprietary Encoding";
+    case 2000:
+        return "FAA/FIS-B Product 1 – Developmental";
+    case 2001:
+        return "FAA/FIS-B Product 2 – Developmental";
+    case 2002:
+        return "FAA/FIS-B Product 3 – Developmental";
+    case 2003:
+        return "FAA/FIS-B Product 4 – Developmental";
+    case 2004:
+        return "WSI Products - Proprietary Encoding";
+    case 2005:
+        return "WSI Developmental Products";
+    default:
+        return "unknown";
     }
 }
 
 static const char *get_fisb_product_format(uint16_t product_id)
 {
-    switch (product_id) {
-    case 0: case 1: case 2: case 3: case 4: case 5: case 6: case 7: 
-    case 351: case 352: case 353:
-    case 402: case 405:
+    switch (product_id)
+    {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+    case 7:
+    case 351:
+    case 352:
+    case 353:
+    case 402:
+    case 405:
         return "Text";
 
-    case 8: case 9: case 10: case 11: case 12: case 13:        
+    case 8:
+    case 9:
+    case 10:
+    case 11:
+    case 12:
+    case 13:
         return "Text/Graphic";
-       
-    case 20: case 21: case 22: case 23: case 24: case 25: case 26: case 27: 
-    case 411: case 413:
+
+    case 20:
+    case 21:
+    case 22:
+    case 23:
+    case 24:
+    case 25:
+    case 26:
+    case 27:
+    case 411:
+    case 413:
         return "Text (DLAC)";
 
-    case 51: case 52: case 53: case 54: case 55: case 56: case 57: case 58:
-    case 59: case 60: case 61: case 62: case 63: case 64:
-    case 81: case 82: case 83: 
-    case 101: case 102:
+    case 51:
+    case 52:
+    case 53:
+    case 54:
+    case 55:
+    case 56:
+    case 57:
+    case 58:
+    case 59:
+    case 60:
+    case 61:
+    case 62:
+    case 63:
+    case 64:
+    case 81:
+    case 82:
+    case 83:
+    case 101:
+    case 102:
     case 151:
-    case 201: case 202:
+    case 201:
+    case 202:
     case 254:
     case 401:
     case 403:
@@ -783,10 +926,15 @@ static const char *get_fisb_product_format(uint16_t product_id)
     case 412:
         return "Graphic (DLAC)";
 
-    case 600: case 2004:
+    case 600:
+    case 2004:
         return "Proprietary";
 
-    case 2000: case 2001: case 2002: case 2003: case 2005: 
+    case 2000:
+    case 2001:
+    case 2002:
+    case 2003:
+    case 2005:
         return "Developmental";
 
     default:
@@ -796,7 +944,7 @@ static const char *get_fisb_product_format(uint16_t product_id)
 
 static void uat_display_fisb_frame(const struct fisb_apdu *apdu, FILE *to)
 {
-    fprintf(to, 
+    fprintf(to,
             "FIS-B:\n"
             " Flags:             %s%s%s%s\n"
             " Product ID:        %u (%s) - %s\n",
@@ -817,72 +965,80 @@ static void uat_display_fisb_frame(const struct fisb_apdu *apdu, FILE *to)
         fprintf(to, ":%02u", apdu->seconds);
     fprintf(to, "\n");
 
-    switch (apdu->product_id) {
+    switch (apdu->product_id)
+    {
     case 413:
-        {
-            // Generic text, DLAC
-            const char *text = decode_dlac(apdu->data, apdu->length);
-            const char *report = text;
-            
-            while (report) {
-                char report_buf[1024];
-                const char *next_report;
-                char *p, *r;
-                
-                next_report = strchr(report, '\x1e'); // RS
-                if (!next_report)
-                    next_report = strchr(report, '\x03'); // ETX
-                if (next_report) {
-                    memcpy(report_buf, report, next_report - report);
-                    report_buf[next_report - report] = 0;
-                    report = next_report + 1;
-                } else {
-                    strcpy(report_buf, report);
-                    report = NULL;
-                }
-                
-                if (!report_buf[0])
-                    continue;
+    {
+        // Generic text, DLAC
+        const char *text = decode_dlac(apdu->data, apdu->length);
+        const char *report = text;
 
-                r = report_buf;
-                p = strchr(r, ' ');
-                if (p) {
-                    *p = 0;
-                    fprintf(to,
-                            " Report type:       %s\n",
-                            r);
-                    r = p+1;
-                }
-                
-                p = strchr(r, ' ');
-                if (p) {
-                    *p = 0;
-                    fprintf(to,
-                            " Report location:   %s\n",
-                            r);
-                    r = p+1;
-                }
-                
-                p = strchr(r, ' ');
-                if (p) {
-                    *p = 0;
-                    fprintf(to,
-                            " Report time:       %s\n",
-                            r);
-                    r = p+1;
-                }
-                
-                fprintf(to,
-                        " Text:\n%s\n",
-                        r);
+        while (report)
+        {
+            char report_buf[1024];
+            const char *next_report;
+            char *p, *r;
+
+            next_report = strchr(report, '\x1e'); // RS
+            if (!next_report)
+                next_report = strchr(report, '\x03'); // ETX
+            if (next_report)
+            {
+                memcpy(report_buf, report, next_report - report);
+                report_buf[next_report - report] = 0;
+                report = next_report + 1;
             }
-        }            
-        break;
+            else
+            {
+                strcpy(report_buf, report);
+                report = NULL;
+            }
+
+            if (!report_buf[0])
+                continue;
+
+            r = report_buf;
+            p = strchr(r, ' ');
+            if (p)
+            {
+                *p = 0;
+                fprintf(to,
+                        " Report type:       %s\n",
+                        r);
+                r = p + 1;
+            }
+
+            p = strchr(r, ' ');
+            if (p)
+            {
+                *p = 0;
+                fprintf(to,
+                        " Report location:   %s\n",
+                        r);
+                r = p + 1;
+            }
+
+            p = strchr(r, ' ');
+            if (p)
+            {
+                *p = 0;
+                fprintf(to,
+                        " Report time:       %s\n",
+                        r);
+                r = p + 1;
+            }
+
+            fprintf(to,
+                    " Text:\n%s\n",
+                    r);
+        }
+    }
+    break;
     default:
         display_generic_data(apdu->data, apdu->length, to);
         break;
-    }                
-}            
+    }
+}
 
 static const char *info_frame_type_names[16] = {
     "FIS-B APDU",
@@ -900,8 +1056,7 @@ static const char *info_frame_type_names[16] = {
     "Reserved for Future Use (12)",
     "Reserved for Future Use (13)",
     "Reserved for Future Use (14)",
-    "TIS-B/ADS-R Service Status"
-};
+    "TIS-B/ADS-R Service Status"};
 
 static void uat_display_uplink_info_frame(const struct uat_uplink_info_frame *frame, FILE *to)
 {
@@ -913,10 +1068,12 @@ static void uat_display_uplink_info_frame(const struct uat_uplink_info_frame *fr
             frame->type,
             info_frame_type_names[frame->type]);
 
-    if (frame->length > 0) {
+    if (frame->length > 0)
+    {
         if (frame->is_fisb)
             uat_display_fisb_frame(&frame->fisb, to);
-        else {
+        else
+        {
             display_generic_data(frame->data, frame->length, to);
         }
     }
@@ -924,7 +1081,7 @@ static void uat_display_uplink_info_frame(const struct uat_uplink_info_frame *fr
 
 void uat_display_uplink_mdb(const struct uat_uplink_mdb *mdb, FILE *to)
 {
-    fprintf(to, 
+    fprintf(to,
             "UPLINK:\n");
 
     fprintf(to,
@@ -932,7 +1089,7 @@ void uat_display_uplink_mdb(const struct uat_uplink_mdb *mdb, FILE *to)
             " Site Longitude:    %+.4f%s\n",
             mdb->lat, mdb->position_valid ? "" : " (possibly invalid)",
             mdb->lon, mdb->position_valid ? "" : " (possibly invalid)");
-            
+
     fprintf(to,
             " UTC coupled:       %s\n"
             " Slot ID:           %u\n"
@@ -940,8 +1097,9 @@ void uat_display_uplink_mdb(const struct uat_uplink_mdb *mdb, FILE *to)
             mdb->utc_coupled ? "yes" : "no",
             mdb->slot_id,
             mdb->tisb_site_id);
-    
-    if (mdb->app_data_valid) {
+
+    if (mdb->app_data_valid)
+    {
         unsigned i;
         for (i = 0; i < mdb->num_info_frames; ++i)
             uat_display_uplink_info_frame(&mdb->info_frames[i], to);
