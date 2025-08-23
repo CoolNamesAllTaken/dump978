@@ -19,33 +19,33 @@ typedef struct
     uint32_t address;
 
     // Decoded SV fields
-    int has_sv;
+    uint8_t has_sv;
     int nic;
-    int position_valid;
+    uint8_t position_valid : 1;
     double lat;
     double lon;
     int altitude_type; // 0=invalid, 1=baro, 2=geo
     int altitude;
     int airground_state;
-    int ns_vel_valid;
+    uint8_t ns_vel_valid : 1;
     int ns_vel;
-    int ew_vel_valid;
+    uint8_t ew_vel_valid : 1;
     int ew_vel;
     int track_type; // 0=invalid, 1=track, 2=mag_heading, 3=true_heading
     uint16_t track;
-    int speed_valid;
+    uint8_t speed_valid : 1;
     uint16_t speed;
     int vert_rate_source; // 0=invalid, 1=baro, 2=geo
     int vert_rate;
-    int dimensions_valid;
+    uint8_t dimensions_valid : 1;
     double length;
     double width;
     int position_offset;
-    int utc_coupled;
+    uint8_t utc_coupled : 1;
     int tisb_site_id;
 
     // Decoded MS fields
-    int has_ms;
+    uint8_t has_ms : 1;
     int emitter_category;
     char callsign[9];
     int callsign_type; // 0=invalid, 1=callsign, 2=squawk
@@ -56,15 +56,15 @@ typedef struct
     int nac_p;
     int nac_v;
     int nic_baro;
-    int has_cdti;
-    int has_acas;
-    int acas_ra_active;
-    int ident_active;
-    int atc_services;
-    int heading_type; // 0=true, 1=magnetic
+    uint8_t has_cdti : 1;
+    uint8_t has_acas : 1;
+    uint8_t acas_ra_active : 1;
+    uint8_t ident_active : 1;
+    uint8_t atc_services : 1;
+    uint8_t heading_type : 1; // 0=true, 1=magnetic
 
     // Decoded AUXSV fields
-    int has_auxsv;
+    uint8_t has_auxsv : 1;
     int sec_altitude_type; // 0=invalid, 1=baro, 2=geo
     int sec_altitude;
 } uat_downlink_test_frame_t;
